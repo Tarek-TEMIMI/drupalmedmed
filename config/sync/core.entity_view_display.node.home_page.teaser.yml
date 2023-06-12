@@ -1,0 +1,47 @@
+uuid: 91930bd8-7803-45f3-bc5b-135767aae705
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_page.body
+    - field.field.node.home_page.field_block_resources
+    - field.field.node.home_page.field_block_scope
+    - field.field.node.home_page.field_intro_block_scope
+    - field.field.node.home_page.field_slides
+    - field.field.node.home_page.field_text_bottom_block_scope
+    - field.field.node.home_page.field_text_map
+    - field.field.node.home_page.field_title_block_resources
+    - field.field.node.home_page.field_title_block_scope
+    - node.type.home_page
+  module:
+    - text
+    - user
+id: node.home_page.teaser
+targetEntityType: node
+bundle: home_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_block_resources: true
+  field_block_scope: true
+  field_intro_block_scope: true
+  field_slides: true
+  field_text_bottom_block_scope: true
+  field_text_map: true
+  field_title_block_resources: true
+  field_title_block_scope: true
+  langcode: true

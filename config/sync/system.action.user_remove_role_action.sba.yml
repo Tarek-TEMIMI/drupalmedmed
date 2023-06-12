@@ -1,0 +1,14 @@
+uuid: c9c3bea4-1c43-4204-98e7-8e4f4f233560
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sba
+  module:
+    - user
+id: user_remove_role_action.sba
+label: 'Remove the SBA role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sba

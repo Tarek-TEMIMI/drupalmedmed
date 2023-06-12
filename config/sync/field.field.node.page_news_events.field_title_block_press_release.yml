@@ -1,0 +1,19 @@
+uuid: e384d6dd-2a91-413e-8b9e-31ff047c2766
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_block_press_release
+    - node.type.page_news_events
+id: node.page_news_events.field_title_block_press_release
+field_name: field_title_block_press_release
+entity_type: node
+bundle: page_news_events
+label: 'Title block Press Release'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

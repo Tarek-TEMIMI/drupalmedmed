@@ -1,0 +1,49 @@
+uuid: d1266010-7be3-49e8-abb0-89b4dfe3b71b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_link_file
+    - node.type.page
+    - paragraphs.paragraphs_type.link_file
+  module:
+    - entity_reference_revisions
+id: node.page.field_block_link_file
+field_name: field_block_link_file
+entity_type: node
+bundle: page
+label: 'Block link -file'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      link_file: link_file
+    target_bundles_drag_drop:
+      card:
+        weight: 8
+        enabled: false
+      file:
+        weight: 9
+        enabled: false
+      link:
+        weight: 10
+        enabled: false
+      link_file:
+        enabled: true
+        weight: 11
+      text:
+        weight: 12
+        enabled: false
+      text_two_col:
+        weight: 13
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

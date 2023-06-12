@@ -1,0 +1,208 @@
+/* ===================================
+1. General
+==================================== */
+
+@import url('../fonts/font.css');
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'FiraSans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #656565;
+  background: #fff;
+}
+
+a:active {
+  outline: 0;
+}
+
+a {
+  color: #7596ff;
+}
+
+.clear {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FiraSans', sans-serif;
+  font-weight: 700;
+  line-height: 1.1em;
+  color: #666;
+}
+
+br {
+  clear: both;
+}
+
+hr {
+  width: 25%;
+  background: black !important;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+}
+
+/*------------------------------*/
+
+.page .container {
+  background-image: url('../img/image-top.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-bottom: 70px;
+}
+
+.page .container .logo {
+  margin-top: 36px;
+  margin-left: 66px;
+  margin-bottom: 132px;
+}
+
+.page .container h1 {
+  font-size: 57.27px;
+  text-align: center;
+  color: #314ba0;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.page .container h1 span {
+  color: #81ba28;
+  font-size: 57.48px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.page .container p {
+  color: #314ba0;
+  font-size: 28.07px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.page .container .barre {
+  margin: 0 auto 43px;
+  display: block;
+}
+
+.page .container h2 {
+  font-size: 31.87px;
+  text-align: center;
+  color: #0c4da2;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.page .container form {
+  text-align: center;
+}
+
+.page .container form label {
+  font-size: 17.97px;
+  text-align: center;
+  color: #81ba28;
+  font-weight: 400;
+  width: 100%;
+}
+
+.page .container form input[type="text"] {
+  text-align: center;
+  font-size: 17.97px;
+  color: #81ba28;
+  display: block;
+  border: 1px solid #81ba28;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  width: 285px;
+  margin: 0 auto;
+}
+
+.page .container form input[type="submit"] {
+  font-size: 17.97px;
+  color: #fff;
+  display: block;
+  border: 1px solid #81ba28;
+  background-color: #81ba28;
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s all;
+  margin-bottom: 10px;
+}
+
+.page .container form input[type="submit"]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.page .container form span {
+  font-size: 12px;
+  text-align: center;
+  color: #314ba0;
+  font-weight: 300;
+  width: 100%;
+}
+
+.response {
+  width: 285px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.response.true {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #81ba28;
+}
+
+.response.false {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ba3e28;
+}
+
+.page .container form input[type="text"].false {
+  border-color: #ba3e28;
+}
+
+@media (max-width: 640px) {
+  .page .container .logo {
+    margin-left: 0;
+    margin-bottom: 78px;
+  }
+  .page .container h1 {
+    font-size: 49.27px;
+  }
+  .page .container h1 span {
+    font-size: 45.48px;
+  }
+  .page .container p {
+    font-size: 23.07px;
+  }
+  .page .container h2 {
+    font-size: 22.87px;
+  }
+}
+
+@media (max-width:580px) {
+  .page .container .logo {
+    margin-top: 157px;
+  }
+}

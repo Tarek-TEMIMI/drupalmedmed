@@ -1,0 +1,50 @@
+uuid: f64bd3ab-fee1-4606-a4f3-f26abe34531e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.push_member.field_function
+    - field.field.paragraph.push_member.field_job
+    - field.field.paragraph.push_member.field_mail
+    - field.field.paragraph.push_member.field_name
+    - paragraphs.paragraphs_type.push_member
+id: paragraph.push_member.default
+targetEntityType: paragraph
+bundle: push_member
+mode: default
+content:
+  field_function:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mail:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

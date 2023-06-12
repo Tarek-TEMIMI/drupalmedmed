@@ -1,0 +1,47 @@
+uuid: a05820f4-7a73-44ed-b68a-4b1edf32e334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_two_col
+    - paragraphs.paragraphs_type.title_text_text_two_col_card
+  module:
+    - entity_reference_revisions
+id: paragraph.title_text_text_two_col_card.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: title_text_text_two_col_card
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+      text: text
+      text_two_col: text_two_col
+    target_bundles_drag_drop:
+      title_text_text_two_col_card:
+        weight: 6
+        enabled: false
+      card:
+        enabled: true
+        weight: 7
+      link:
+        weight: 8
+        enabled: false
+      text:
+        enabled: true
+        weight: 9
+      text_two_col:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

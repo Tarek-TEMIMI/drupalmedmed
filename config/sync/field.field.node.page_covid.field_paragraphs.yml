@@ -1,0 +1,79 @@
+uuid: e3b1ea69-89e0-453b-8be0-93378f1af1ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page_covid
+    - paragraphs.paragraphs_type.block_pays
+  module:
+    - entity_reference_revisions
+id: node.page_covid.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page_covid
+label: 'Block pays'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_pays: block_pays
+    target_bundles_drag_drop:
+      block_pays:
+        enabled: true
+        weight: 18
+      block_consult_responses:
+        weight: 19
+        enabled: false
+      block_regional_initiatives:
+        weight: 20
+        enabled: false
+      block_scope:
+        weight: 21
+        enabled: false
+      card:
+        weight: 22
+        enabled: false
+      file:
+        weight: 23
+        enabled: false
+      link:
+        weight: 24
+        enabled: false
+      link_file:
+        weight: 25
+        enabled: false
+      push_member:
+        weight: 26
+        enabled: false
+      push_regional_initiatives:
+        weight: 27
+        enabled: false
+      slide:
+        weight: 28
+        enabled: false
+      text:
+        weight: 29
+        enabled: false
+      text_two_col:
+        weight: 30
+        enabled: false
+      title_icon_link:
+        weight: 31
+        enabled: false
+      title_left_text_right:
+        weight: 32
+        enabled: false
+      title_text:
+        weight: 33
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

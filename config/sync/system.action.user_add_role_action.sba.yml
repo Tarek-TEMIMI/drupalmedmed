@@ -1,0 +1,14 @@
+uuid: 376a864a-9f12-4c6f-9518-abaa5a3b1fab
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sba
+  module:
+    - user
+id: user_add_role_action.sba
+label: 'Add the SBA role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sba

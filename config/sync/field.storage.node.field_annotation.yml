@@ -1,0 +1,19 @@
+uuid: dd4f8f55-0df1-4da2-946c-246c32c7d7d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_annotation
+field_name: field_annotation
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

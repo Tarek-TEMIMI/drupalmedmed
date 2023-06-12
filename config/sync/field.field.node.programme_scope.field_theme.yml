@@ -1,0 +1,21 @@
+uuid: df2a3e1d-2a24-4996-ab4d-31e29ce71046
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.programme_scope
+  module:
+    - options
+id: node.programme_scope.field_theme
+field_name: field_theme
+entity_type: node
+bundle: programme_scope
+label: Theme
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 5c2e93e3-e51d-4ab8-823d-e0406f2cb756
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.contact
+id: node.contact.field_address
+field_name: field_address
+entity_type: node
+bundle: contact
+label: Address
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>MED MSMEs</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- style Core CSS -->
+  <link href="fonts/font.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--<link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <section class="page">
+    <div class="container" style="max-width:1200px;">
+      <img src="img/med-esmess.png" alt="MED MSMEs" class="logo">
+      <h1>MED MSMEs <span>programme</span></h1>
+      <p style="margin-bottom:10px;">The MED MSMEs Programme aims to create</br>
+        knowledge, convene stakeholders and support</br>
+        dialogue at regional level to inspire policies and</br>
+        regulatory reforms for MSME internationalisation</br>
+        and financing.</p>
+      <div style="color:#0c4da2; font-size:18px; font-weight:500; text-align: center; margin-bottom: 30px;"></div>
+      <img src="img/barre.png" alt="MED MSMEs" class="barre">
+      <h2>Website under construction</h2>
+      <form id="form_ins" action="send.php" method="post">
+        <label>Register yourself </label>
+        <input type="text" name="msmes_mail" placeholder="E-mail adress">
+        <div class="response"></div>
+        <input type="submit" value="Send">
+        <span>As soon as our site is online you will receive a notification</span>
+      </form>
+      <div style="color:#0c4da2; font-size:18px; font-weight:500; text-align: center; margin-top: 30px;">For more
+        information please send an email to <span style="color:#81ba28">info@medmsmes.eu</span></div>
+      <script>
+        var form_ins = document.querySelector("#form_ins");
+        if (form_ins) {
+          var fm = new FormData();
+          form_ins.onsubmit = function (e) {
+            e.preventDefault();
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function (e) {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  var form_ins_response = document.querySelector(".response");
+                  if (form_ins_response) {
+                    form_ins_response.classList.remove("true");
+                    form_ins_response.classList.remove("false");
+                    form_ins_response.innerHTML = "";
+                    try {
+                      var result = JSON.parse(this.responseText);
+                      switch (result.error) {
+                        case 0:
+                          form_ins_response.classList.add("true");
+                          // form_ins.msmes_mail.classList.remove("false");
+                          form_ins.msmes_mail.value = "";
+                          break;
+                        default:
+                          // form_ins_response.classList.add("false");
+                          // form_ins.msmes_mail.classList.add("false");
+                          break;
+                      }
+                      form_ins_response.innerHTML = result.message;
+                    } catch (e) { }
+                  }
+                }
+              }
+            }
+            xhr.open("POST", form_ins.action, true);
+            fm.append(form_ins.msmes_mail.name, form_ins.msmes_mail.value)
+            xhr.send(fm);
+          }
+        }
+      </script>
+    </div>
+  </section>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

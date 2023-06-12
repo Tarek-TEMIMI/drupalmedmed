@@ -1,0 +1,67 @@
+uuid: 02d0735b-19ec-4491-9225-23ee0614e8e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_push_regional_initiatives
+    - paragraphs.paragraphs_type.block_regional_initiatives
+    - paragraphs.paragraphs_type.push_regional_initiatives
+  module:
+    - entity_reference_revisions
+id: paragraph.block_regional_initiatives.field_push_regional_initiatives
+field_name: field_push_regional_initiatives
+entity_type: paragraph
+bundle: block_regional_initiatives
+label: 'Push regional initiatives'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      push_regional_initiatives: push_regional_initiatives
+    target_bundles_drag_drop:
+      push_regional_initiatives:
+        enabled: true
+        weight: 14
+      block_regional_initiatives:
+        weight: 15
+        enabled: false
+      card:
+        weight: 16
+        enabled: false
+      file:
+        weight: 17
+        enabled: false
+      link:
+        weight: 18
+        enabled: false
+      link_file:
+        weight: 19
+        enabled: false
+      slide:
+        weight: 20
+        enabled: false
+      text:
+        weight: 21
+        enabled: false
+      text_two_col:
+        weight: 22
+        enabled: false
+      title_icon_link:
+        weight: 23
+        enabled: false
+      title_left_text_right:
+        weight: 24
+        enabled: false
+      title_text:
+        weight: 25
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

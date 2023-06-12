@@ -1,0 +1,10 @@
+{% block paragraph %}
+  {% block content %}
+<li class="flag-item">
+  <a href="{{  content.field_link['#items'][0].url }}">
+    <img class="flag-image" src="{{ file_url(paragraph.field_icon.entity.fileuri) }}" />
+    <h2 class="flag-title">{{ content.field_title }}</h2>
+  </a>
+</li>
+  {% endblock %}
+{% endblock paragraph %}

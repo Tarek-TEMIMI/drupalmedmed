@@ -1,0 +1,10 @@
+uuid: 6b1d0301-9534-4082-9d70-a4f8dd7d590a
+langcode: en
+status: true
+dependencies: {  }
+id: block_regional_initiatives
+label: 'Block Regional Initiatives'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,47 @@
+uuid: b7717711-9149-4300-ac29-228aa207203d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contact.body
+    - field.field.node.contact.field_address
+    - field.field.node.contact.field_icon_scope
+    - field.field.node.contact.field_map
+    - field.field.node.contact.field_push_member
+    - field.field.node.contact.field_site_web
+    - field.field.node.contact.field_tel
+    - field.field.node.contact.field_title_block_address
+    - field.field.node.contact.field_title_block_members
+    - node.type.contact
+  module:
+    - text
+    - user
+id: node.contact.teaser
+targetEntityType: node
+bundle: contact
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_icon_scope: true
+  field_map: true
+  field_push_member: true
+  field_site_web: true
+  field_tel: true
+  field_title_block_address: true
+  field_title_block_members: true
+  langcode: true

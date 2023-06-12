@@ -1,0 +1,37 @@
+<div class="events-information">
+  {{ content.field_description }}
+  <div class="description-time-local clearfix">
+    <div class="time">
+      <span>{{ content.field_date }},</span>
+    </div>
+    <div class="local">
+      <span>{{ content.field_location }}.</span>
+    </div>
+    <div class="exterieur-link">
+      <a href="{{ url }}">{{ 'Read more'|t }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="block-images">
+  <div class="block-images-content">
+    <div class="block-images-image">
+      {{ content.field_image_event }}
+    </div>
+    <div class="block-images-description">
+      <h2 class="bloc-images-title">{{ label }}</h2>
+      <span class="bloc-images-date">{{ content.field_date }}</span>
+    </div>
+  </div>
+</div>
+
+{% if content.field_block_title_link_icon['#items'][0] %}
+    <section class="download-bloc-wrapper">
+      <div class="download-list-wrapper second-bloc">
+        <ul class="download-list">
+          {{ content.field_block_title_link_icon }}
+        </ul>
+      </div>
+    </section>
+{% endif %}
+

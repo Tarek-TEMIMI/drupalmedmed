@@ -1,0 +1,61 @@
+uuid: 45742757-c652-4826-ac35-35437460cf6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_title_link_icon
+    - node.type.events
+    - paragraphs.paragraphs_type.title_icon_link
+  module:
+    - entity_reference_revisions
+id: node.events.field_block_title_link_icon
+field_name: field_block_title_link_icon
+entity_type: node
+bundle: events
+label: 'Block Title - Link - Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_icon_link: title_icon_link
+    target_bundles_drag_drop:
+      card:
+        weight: 12
+        enabled: false
+      file:
+        weight: 13
+        enabled: false
+      link:
+        weight: 14
+        enabled: false
+      link_file:
+        weight: 15
+        enabled: false
+      slide:
+        weight: 16
+        enabled: false
+      text:
+        weight: 17
+        enabled: false
+      text_two_col:
+        weight: 18
+        enabled: false
+      title_icon_link:
+        enabled: true
+        weight: 19
+      title_left_text_right:
+        weight: 20
+        enabled: false
+      title_text:
+        weight: 21
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: 2c4d224f-0e9f-405b-84c5-ba9465cdec4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.social_network_block
+label: 'Social network Block'
+targetEntityType: paragraph
+cache: true

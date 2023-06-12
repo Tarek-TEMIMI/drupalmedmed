@@ -1,0 +1,5 @@
+services:
+  med_msmes_resources.twig.get_uri_icon_taxonomy_by_name:
+    class: Drupal\med_msmes_resources\TwigExtension\GetUriIconTaxonomyByNameTwigExtension
+    tags:
+      - { name: twig.extension }

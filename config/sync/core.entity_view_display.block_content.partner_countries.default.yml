@@ -1,0 +1,29 @@
+uuid: 376ab8ca-45d9-4102-a624-b2128c9f5528
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partner_countries
+    - field.field.block_content.partner_countries.field_url
+  module:
+    - link
+id: block_content.partner_countries.default
+targetEntityType: block_content
+bundle: partner_countries
+mode: default
+content:
+  field_url:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

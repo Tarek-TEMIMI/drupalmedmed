@@ -1,0 +1,21 @@
+uuid: b22001f9-996a-4aa3-a4d0-b541e0c40b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_map
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_text_map
+field_name: field_text_map
+entity_type: node
+bundle: home_page
+label: 'Text map'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

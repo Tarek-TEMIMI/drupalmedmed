@@ -1,0 +1,8 @@
+uuid: 4b5ef644-49f0-4edb-8c68-5d37f3ce268f
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-2-fr
+label: 'Footer 2 fr'
+description: ''
+locked: false

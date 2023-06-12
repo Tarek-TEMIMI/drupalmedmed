@@ -1,0 +1,5 @@
+name: 'med_msmes_resources'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'

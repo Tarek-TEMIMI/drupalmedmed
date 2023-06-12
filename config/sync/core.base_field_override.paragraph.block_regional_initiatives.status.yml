@@ -1,0 +1,22 @@
+uuid: 1b0f352f-7275-4aed-b04f-6b580d0d312d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block_regional_initiatives
+id: paragraph.block_regional_initiatives.status
+field_name: status
+entity_type: paragraph
+bundle: block_regional_initiatives
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

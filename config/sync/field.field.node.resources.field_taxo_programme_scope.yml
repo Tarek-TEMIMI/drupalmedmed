@@ -1,0 +1,29 @@
+uuid: 3e626c46-c981-4a22-b77f-d4ae3d26f111
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxo_programme_scope
+    - node.type.resources
+    - taxonomy.vocabulary.programme_scope
+id: node.resources.field_taxo_programme_scope
+field_name: field_taxo_programme_scope
+entity_type: node
+bundle: resources
+label: 'Programme scope'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme_scope: programme_scope
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

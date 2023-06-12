@@ -1,0 +1,33 @@
+uuid: ce5aa7a0-7ce1-457a-a8d8-540bd48c450e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-fr
+  module:
+    - language
+    - system
+  theme:
+    - med_msmes
+id: footerfr
+theme: med_msmes
+region: first_footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer-fr'
+settings:
+  id: 'system_menu_block:footer-fr'
+  label: 'Footer fr'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

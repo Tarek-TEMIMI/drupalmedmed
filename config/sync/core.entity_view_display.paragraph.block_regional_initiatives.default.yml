@@ -1,0 +1,42 @@
+uuid: ab4b0ddc-cd25-403c-9c0f-a66c66844db5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_regional_initiatives.field_push_regional_initiatives
+    - field.field.paragraph.block_regional_initiatives.field_texte
+    - field.field.paragraph.block_regional_initiatives.field_title
+    - paragraphs.paragraphs_type.block_regional_initiatives
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.block_regional_initiatives.default
+targetEntityType: paragraph
+bundle: block_regional_initiatives
+mode: default
+content:
+  field_push_regional_initiatives:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_texte:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

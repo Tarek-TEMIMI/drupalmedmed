@@ -1,0 +1,18 @@
+uuid: 74cdd472-d119-47e3-9dbd-5f037e3f28ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block_regional_initiatives
+id: paragraph.block_regional_initiatives.created
+field_name: created
+entity_type: paragraph
+bundle: block_regional_initiatives
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

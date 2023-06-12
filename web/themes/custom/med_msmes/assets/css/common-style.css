@@ -1,0 +1,90 @@
+p {
+    text-align: justify;
+    margin-bottom: 30px !important;
+}
+.row {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+area:focus {
+    outline: none;
+}
+iframe {
+  width: 100%;
+  z-index:1000;
+}
+iframe div{
+  background-color: #898989 !important;
+ }
+p a {
+    color: #4085c3;
+    text-decoration: underline;
+}
+/*Title green violet*/
+.title-green-violet .sub-title h2::before {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  top: 6px;
+  left: 0;
+  background-image: url(../images/icon-h2-green.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.title-green-violet .after-title {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #62b19c;
+  margin-left: 35px;
+}
+/*title-vert-violet */
+.title-vert-violet .sub-title h2,.title-green-violet .sub-title h2{
+  position: relative;
+  color: #32317f;
+  font-size: 37px;
+  font-weight: 600;
+  padding-left: 50px;
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+
+.title-vert-violet .sub-title h2::before {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  top: 6px;
+  left: 0;
+  background-image: url(../images/icon-h2-vert.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.title-vert-violet .after-title {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #8fba53;
+  margin-left: 35px;
+}
+@media screen and (max-width: 991px){
+  p{
+    margin-bottom: 15px !important;
+  }
+  /*Title vert violet and Title green violet*/
+  .title-vert-violet .sub-title h2,.title-green-violet .sub-title h2{
+    font-size: 15px !important;
+    padding-left: 25px !important;
+  }
+  .title-vert-violet .after-title,.title-green-violet .after-title{
+      margin-left: 20px !important;
+  }
+  .title-vert-violet .sub-title h2::before,.title-green-violet .sub-title h2::before {
+    width: 15px !important;
+    height: 15px !important;
+    top: 3px !important;
+  }
+}

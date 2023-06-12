@@ -1,0 +1,10 @@
+uuid: 3b07d723-ccb7-41b0-8b2d-b227076a67ec
+langcode: en
+status: true
+dependencies: {  }
+id: title_text_text_two_col_card
+label: 'Title , Text - Text two col - Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

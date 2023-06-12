@@ -1,0 +1,11 @@
+<section class="resource-nav-tabs">
+  {{ form.field_type_resources_target_id }}
+</section>
+<div class="resource-listescope-wrapper">
+{{ form.field_taxo_programme_scope_target_id }}
+</div>
+<section class="resource-countries-filtre" style="float:left">
+  {{ form.field_taxo_countries_target_id }}
+</section>
+{{ form|without('field_taxo_countries_target_id','field_taxo_programme_scope_target_id','field_type_resources_target_id') }}
+ 

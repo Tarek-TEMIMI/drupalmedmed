@@ -1,0 +1,8 @@
+uuid: 0342c3bc-7238-4696-b1b7-475e0bcad4e1
+langcode: fr
+status: true
+dependencies: {  }
+id: main-navigation-fr
+label: 'Main navigation fr'
+description: ''
+locked: false

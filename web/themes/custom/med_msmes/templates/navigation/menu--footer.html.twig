@@ -1,0 +1,28 @@
+
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {% for item in items %}
+          <li class="link-item">
+            <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+          </li>
+      {% endfor %}
+    {% else %}
+      {% for item in items %}
+        <li class="link-item">
+          <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+
+
+
+
+
+

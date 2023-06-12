@@ -1,0 +1,21 @@
+uuid: ba91e0cf-5fdd-418d-a698-fa8882eeb8a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.block_scope
+  module:
+    - options
+id: paragraph.block_scope.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: block_scope
+label: Color
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

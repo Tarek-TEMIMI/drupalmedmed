@@ -1,0 +1,372 @@
+<?php
+use Drupal\Core\Url;
+use Drupal\views\Views;
+use Drupal\taxonomy\Entity\Term;
+use \Drupal\node\Entity\Node;
+use Drupal\block_content\Entity\BlockContent;
+
+
+/**
+ * THEME_preprocess_page
+ *
+ * @param $variables
+ */
+function med_msmes_preprocess_page(&$variables) {
+  $variables['base_path'] = base_path();
+  $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['currentLanguage'] = $currentLanguage;
+  global $base_url;
+  $variables['base_url'] = $base_url;
+  $variables['logo_uri'] = theme_get_setting('logo.url');
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', 'page_search')
+      ->execute();
+    if (!empty($nids)) {
+      $nodes = Node::loadMultiple($nids);
+      if (!empty($nodes)) {
+        $action_search = end($nodes);
+        $variables['action_search']= !empty($action_search) ? $action_search->toUrl()->toString()  : '';
+      }
+    }
+  $url_logout= Url::fromRoute('user.logout');
+  $variables['url_logout'] = $url_logout->setAbsolute()->toString();
+  if(\Drupal::currentUser()->isAuthenticated() && in_array('sba', \Drupal::currentUser()->getRoles()) ) {
+    $variables['login_sba'] = true;
+  }
+
+
+  $block = BlockContent::load('4');
+  if(!empty($block)){
+  $render = \Drupal::entityTypeManager()
+    ->getViewBuilder('block_content')
+    ->view($block);
+
+  $variables['partner_countries'] = $render;
+}
+}
+
+function med_msmes_preprocess_links__language_block(&$variables){
+
+  $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['currentLanguage'] = $currentLanguage;
+  foreach ($variables['links'] as $i => &$link) {
+    /** @var \Drupal\language\Entity\ConfigurableLanguage $linkLanguage */
+    $linkLanguage = $link['link']['#options']['language'];
+
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (is_object($node)) {
+
+      $has_translation = $node->hasTranslation($linkLanguage->get('id'));
+
+      // Si la page n'a pas de traduction, on change le lien pour pointer vers la home
+      if (!$has_translation) {
+        $url = Url::fromRoute('<front>', [], ['language' => $currentLanguage]);
+
+        $link['link']['#url'] = $url;
+      }
+    }
+  }
+
+  //  dump($variables);die;
+  foreach ($variables['links'] as &$link) {
+    $link['link']['#title'] = strtoupper($link['link']['#options']['language']->get('id'));
+    $link['link']['#options']['attributes']['lang'] = $link['link']['#options']['language']->get('id');
+  }
+
+}
+function med_msmes_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    if($node->bundle() == 'programme_scope') {
+      switch ($node->field_theme->getValue()[0]['value']) {
+        case 'Result_1':
+          $class_theme = 'resultat-1';
+          break;
+        case 'Result_2':
+          $class_theme = 'resultat-2';
+          break;
+        case 'Result_3':
+          $class_theme = 'resultat-3';
+          break;
+        case 'Result_4':
+          $class_theme = 'resultat-4';
+          break;
+        case 'Result_5':
+          $class_theme = 'resultat-5';
+          break;
+      }
+      $variables['attributes']['class'][] = 'programme-scrope '.$class_theme;
+      
+    }
+  }
+  $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['currentLanguage'] = $currentLanguage;
+}
+
+function med_msmes_preprocess_node__programme_scope(&$variables) {
+  $view = Views::getView('country');
+  $view->setDisplay('block_1');
+  $variables['country'] = $view->render();
+  $url_login = Url::fromRoute('user.login');
+  $variables['url_login'] = $url_login->setAbsolute()->toString();
+
+  if(\Drupal::currentUser()->isAuthenticated() && in_array('sba', \Drupal::currentUser()->getRoles()) ) {
+    $variables['login_sba'] = true;
+  }
+}
+
+function med_msmes_preprocess_node__home_page(&$variables) {
+
+
+  $variables['url_page_morocco'] = _get_page_country_by_title('morocco');
+  $variables['url_page_tunisia'] =  _get_page_country_by_title('tunisia');
+  $variables['url_page_algeria'] =  _get_page_country_by_title('algeria');
+  $variables['url_page_libya'] =  _get_page_country_by_title('libya');
+  $variables['url_page_egypt'] =  _get_page_country_by_title('egypt');
+  $variables['url_page_syria'] =  _get_page_country_by_title('syria**');
+  $variables['url_page_lebanon'] =  _get_page_country_by_title('lebanon');
+  $variables['url_page_israel'] =  _get_page_country_by_title('israel');
+  $variables['url_page_palestine'] =  _get_page_country_by_title('palestine*');
+  $variables['url_page_jordan'] =  _get_page_country_by_title('jordan');
+  
+  $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['currentLanguage'] = $currentLanguage;
+}
+
+function med_msmes_preprocess_node__page_news_events(&$variables) {
+    $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+	
+  $view = Views::getView('events');
+
+  $view->setDisplay('block_1');
+  $variables['currentLanguage'] = $currentLanguage;
+  $variables['events'] = $view->render();
+
+}
+
+function _get_page_country_by_title($title) {
+
+  $query = \Drupal::entityQuery('node')
+    ->condition('status', 1)
+    ->condition('type', 'country', '=')
+    ->condition('title', $title, '=');
+  $nids = $query->execute();
+  $nid = reset($nids);
+  $node = Node::load($nid);
+  if(is_object($node)) {
+    return $node->toUrl()->setAbsolute()->toString();
+  }
+  return FALSE;
+}
+
+function med_msmes_preprocess_node__page_resources(&$variables) {
+
+  $view = Views::getView('resources');
+  $view->setDisplay('resources');
+  $variables['resources'] = $view->render();
+
+}
+
+function med_msmes_preprocess_node__resources(&$variables) {
+  if($variables['elements']['#view_mode'] == 'teaser') {
+    if(isset($variables['content']['field_type_resources'])) {
+      $target_id = $variables['content']['field_type_resources']['#items']->getValue()[0]['target_id'];
+      $term = Term::load($target_id);
+      $variables['type_resource'] =  strtolower($term->getName());
+    }
+  }
+}
+function med_msmes_preprocess_node__page_search(&$variables) {
+  $view = Views::getView('search');
+  $view->setDisplay('block_1');
+  $variables['block_search'] = $view->render();
+}
+
+function med_msmes_preprocess_node__covid(&$variables) {
+
+  if($variables['view_mode'] == 'full') {
+    $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'page_covid', '=');
+    $nids = $query->execute();
+    $nid = reset($nids);
+    $node_covid = Node::load($nid);
+
+    if (is_object($node_covid)) {
+      if ($node_covid->hasTranslation($lang)) {
+        $node_covid = $node_covid->getTranslation($lang);
+      }
+      if ($node_covid->hasField('field_covid')) {
+        $variables['menus_covid'] = $node_covid->get('field_covid')->getValue();
+      }
+    }
+    $query2 = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'page_faq', '=');
+    $nids_faq = $query2->execute();
+    $nid_faq = reset($nids_faq);
+    $node_faq = Node::load($nid_faq);
+    if (is_object($node_faq)) {
+
+      if ($node_faq->hasTranslation($lang)) {
+        $node_faq = $node_faq->getTranslation($lang);
+      }
+
+      $variables['node_faq_title'] = $node_faq->getTitle();
+      $variables['node_faq_url'] = $node_faq->toUrl()
+        ->setAbsolute()
+        ->toString();
+    }
+
+  }
+
+  if($variables['view_mode'] == 'menu_covid') {
+    $current_node = \Drupal::routeMatch()->getParameter('node');
+    if ($current_node instanceof \Drupal\node\NodeInterface) {
+      $variables['current_nid'] = $current_node->id();
+    }
+    $variables['#cache']['max-age'] = 0;
+  }
+
+}
+function med_msmes_preprocess_node__page_folder(&$variables) {
+  $view = Views::getView('folder');
+  $view->setDisplay('block_1');
+  $variables['folder'] = $view->render();
+
+}
+function med_msmes_preprocess_node__page_faq(&$variables) {
+  $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+  $view = Views::getView('faq');
+  $view->setDisplay('block_1');
+  $variables['faq'] = $view->render();
+
+  $query = \Drupal::entityQuery('node')
+    ->condition('status', 1)
+    ->condition('type', 'page_covid', '=');
+  $nids = $query->execute();
+  $nid = reset($nids);
+  $node = Node::load($nid);
+  if(is_object($node)) {
+    if($node->hasTranslation($lang)) {
+      $node = $node->getTranslation($lang);
+    }
+    if ($node->hasField('field_covid')) {
+      $variables['menus_covid'] = $node->get('field_covid')->getValue();
+    }
+  }
+
+  $variables['#cache']['tags'][] = 'node:' . $variables['node']->id();
+}
+
+
+function med_msmes_preprocess_views_view__resources(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    if(!empty($node->get('body')->getValue()[0]['value'])) {
+      $variables['text_condition'] = $node->get('body')->getValue()[0]['value'];
+    }
+  }
+}
+
+function med_msmes_preprocess_views_view__search(&$variables) {
+  $variables['search_key'] = \Drupal::request()->query->get('keys', '');
+}
+function med_msmes_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+    $currentLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['currentLanguage'] = $currentLanguage;
+ if($paragraph->bundle() == 'block_scope') {
+       switch ($paragraph->get('field_color')->getValue()[0]['value']) {
+         case 'Result_1':
+           $class_theme = 'green-color';
+           break;
+         case 'Result_2':
+           $class_theme = 'light-green';
+           break;
+         case 'Result_3':
+           $class_theme = 'blue-color';
+           break;
+       }
+       $variables['class_theme'] = $class_theme;
+ }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function med_msmes_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+
+    if (isset($variables['element']['#name']) &&  in_array($variables['element']['#name'],['field_taxo_countries_target_id','field_tags_target_id'])  && $variables['element']['#type'] == 'radios') {
+    $suggestions[] = 'fieldset__' . $variables['element']['#type'] . '__resources';
+    }
+
+  if (isset($variables['element']['#name']) &&  $variables['element']['#name'] == 'field_type_resources_target_id'  && $variables['element']['#type'] == 'radios') {
+    $suggestions[] = 'fieldset__' . $variables['element']['#type'] . '__type__resources';
+  }
+
+  if (isset($variables['element']['#name']) &&  $variables['element']['#name'] == 'field_taxo_programme_scope_target_id'  && $variables['element']['#type'] == 'radios') {
+    $suggestions[] = 'fieldset__' . $variables['element']['#type'] . '__programme__scope__resources';
+  }
+}
+
+function med_msmes_theme_suggestions_radios_alter(&$suggestions, array $variables) {
+
+  if (isset($variables['element']['#name']) && $variables['element']['#type'] == 'radios') {
+    $suggestions[] = $variables['element']['#type'] . '__resources';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function med_msmes_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+
+  $suggestions [] = 'form_element__type__' . $variables['element']['#type'];
+
+  if (isset($variables['element']['#name']) &&  $variables['element']['#name'] == 'field_type_resources_target_id'  && $variables['element']['#type'] == 'radio') {
+    $suggestions[] = 'form_element__type__' . $variables['element']['#type'] . '__type__resources';
+  }
+
+ if (isset($variables['element']['#name']) &&  $variables['element']['#name'] == 'field_taxo_programme_scope_target_id'  && $variables['element']['#type'] == 'radio') {
+    $suggestions[] = 'form_element__type__' . $variables['element']['#type'] . '__programme__scope__resources';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function med_msmes_theme_suggestions_bef_radios_alter(array &$suggestions, array $variables) {
+
+  $suggestions = ['form_element__type__' . $variables['element']['#type']];
+
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function med_msmes_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  if(!empty($variables['element']['#is_search'])) {
+    $suggestions[] = 'input__search__submit';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function med_msmes_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $type = $node->bundle();
+    if ($type == 'page') {
+      $suggestions[] = 'paragraph__' . $variables['elements']['#paragraph']->bundle(). '__' . $type;
+    }
+  }
+
+
+
+}

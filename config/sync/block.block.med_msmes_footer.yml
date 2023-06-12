@@ -1,0 +1,35 @@
+uuid: 505a376f-18f4-427c-937b-c4fa33e7040b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - language
+    - system
+  theme:
+    - med_msmes
+_core:
+  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
+id: med_msmes_footer
+theme: med_msmes
+region: first_footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

@@ -1,0 +1,8 @@
+uuid: 68490a48-8e22-4341-a560-85e0b7706527
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-fr
+label: 'Footer fr'
+description: ''
+locked: false

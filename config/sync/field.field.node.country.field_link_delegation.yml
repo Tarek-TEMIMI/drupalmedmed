@@ -1,0 +1,23 @@
+uuid: a0539e8f-12f7-437a-8a6e-3dd9720a7200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_delegation
+    - node.type.country
+  module:
+    - link
+id: node.country.field_link_delegation
+field_name: field_link_delegation
+entity_type: node
+bundle: country
+label: 'Link delegation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,19 @@
+uuid: 1f10a9ce-09f7-42aa-9249-0cef4aa07352
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annotation
+    - node.type.programme_scope
+id: node.programme_scope.field_annotation
+field_name: field_annotation
+entity_type: node
+bundle: programme_scope
+label: Annotation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

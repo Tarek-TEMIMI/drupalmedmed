@@ -1,0 +1,60 @@
+/*text with deux colonne */
+.resultat-2 .resultat-content-wrapper .resultat-title::before {
+  background-image: url('../../images/resultat-double-tri-resultat2.png');
+}
+.resultat-2 .resultat-content-wrapper .resultat-title h2 {
+  color: #2588c6;
+}
+.resultat-2 .resultat-content-wrapper .resultat-description-wrapper {
+  color: #2588c6;
+}
+/*announce card*/
+.resultat-2 .resultat-content-wrapper .resultat-announce-card {
+  background-color: #83ba37;
+}
+/* text with icon */
+.resultat-2 .resultat-description-wrapper.row.two-col.with-icon p::before {
+  background-image: url('../../images/triangle-vert.png');
+}
+/*text padding*/
+.resultat-2 .one-col .resultat-description.col-12 {
+  padding: 0;
+}
+/*link*/
+.programme-scrope.resultat-2 p a{
+  color:#2588c6;
+}
+/*bloc countries*/
+.resultat-2 .resultat-content-wrapper .resultat-flag-wrapper {
+  border-bottom: 1px solid #2588c6;
+}
+.resultat-2 .resultat-content-wrapper .resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title {
+  color: #2588c6;
+}
+.resultat-2 .resultat-content-wrapper .resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title::before {
+  background-color: #2588c6;
+}
+/*End bloc countries*/
+/*bloc sba*/
+.resultat-2 .resultat-content-wrapper{
+  padding: 90px 122px 70px ;
+}
+.resultat-2 .resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link {
+  color: #2588c6;
+}
+/*End bloc sba*/
+/*Block custom link resultat1*/
+.resultat-2 .custom-link-wrapper .custom-link-items {
+  background-color: #83ba37;
+}
+.resultat-2 .custom-link-wrapper .custom-link-items::before,.resultat-2 .custom-link-wrapper .custom-link-items::after {
+  background-image: url('../../images/download-resultat-2.png');
+}
+.resultat-2 .custom-link-wrapper .custom-link-items a:hover {
+  color: #2588c6;
+}
+@media screen and (max-width:991px){
+  .resultat-2 .resultat-content-wrapper{
+    padding: 40px 40px ;
+  }
+}

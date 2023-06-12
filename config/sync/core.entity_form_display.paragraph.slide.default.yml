@@ -1,0 +1,35 @@
+uuid: c84ae244-27d3-48f4-a6f7-3f24049d58b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide.field_image
+    - field.field.paragraph.slide.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.slide
+  module:
+    - image
+id: paragraph.slide.default
+targetEntityType: paragraph
+bundle: slide
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

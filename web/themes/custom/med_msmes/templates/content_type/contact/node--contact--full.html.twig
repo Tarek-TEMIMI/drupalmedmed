@@ -1,0 +1,36 @@
+
+<div class="container-wrapper">
+  <section class="contact-intro-wrapper">
+  <div class="contact-intro-description">
+    <h1 class="contact-intro-title">{{ label }}</h1>
+    <div class="contact-icon-wrapper">
+      {{ content.field_icon_scope }}
+    </div>
+  </div>
+</section>
+  <section class="contact-content">
+    <div class="row address-info-bloc">
+      <div class="col-12 col-lg-6">
+        <h2 class="contact-title">{{ content.field_title_block_address }}</h2>
+        <div class="contact-details">
+          <div class="contact-adress">{{ content.field_address }}</div>
+          <div class="contact-tel">{{ 'Tel.:'|t }} {{ content.field_tel }}</div>
+          <div class="contact-web"><a href="{{ content.field_site_web }}">{{ content.field_site_web }}</a></div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 ">
+        <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6385.741634106941!2d10.2705252!3d36.8455698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x110f89e131f767e1!2sR%C3%A9sidence%20Molka!5e0!3m2!1sfr!2stn!4v1589528497130!5m2!1sfr!2stn" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="team-info-bloc">
+      <h2 class="contact-title">{{ content.field_title_block_members }}</h2>
+      <div class="contact-details">
+        <div class="row">
+          {{ content.field_push_member }}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

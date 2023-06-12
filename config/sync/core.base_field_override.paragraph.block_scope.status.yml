@@ -1,0 +1,22 @@
+uuid: 1fbab74f-39a6-45dc-aaca-c7390df625c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block_scope
+id: paragraph.block_scope.status
+field_name: status
+entity_type: paragraph
+bundle: block_scope
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

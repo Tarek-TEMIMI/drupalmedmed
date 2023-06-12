@@ -1,0 +1,8 @@
+uuid: 11b7953f-2682-4a5f-9e84-4e28fc389e5a
+langcode: en
+status: true
+dependencies: {  }
+name: Folder
+vid: folder
+description: ''
+weight: 0

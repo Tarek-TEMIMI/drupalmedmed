@@ -1,0 +1,47 @@
+uuid: cb11f3de-aa07-4b6e-ba38-8c042521d950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_consult_responses.field_file
+    - field.field.paragraph.block_consult_responses.field_tag
+    - field.field.paragraph.block_consult_responses.field_title
+    - paragraphs.paragraphs_type.block_consult_responses
+  module:
+    - file
+id: paragraph.block_consult_responses.default
+targetEntityType: paragraph
+bundle: block_consult_responses
+mode: default
+content:
+  field_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_tag:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,130 @@
+uuid: 83ad919d-6403-43e3-9c95-7a2b2a7d86e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.country.body
+    - field.field.node.country.field_annotation
+    - field.field.node.country.field_block_title_link_icon
+    - field.field.node.country.field_flag
+    - field.field.node.country.field_image
+    - field.field.node.country.field_link_delegation
+    - field.field.node.country.field_paragraphs
+    - field.field.node.country.field_practices
+    - field.field.node.country.field_text_image
+    - field.field.node.country.field_title_block_practices
+    - field.field.node.country.field_title_image
+    - node.type.country
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - text
+    - user
+id: node.country.default
+targetEntityType: node
+bundle: country
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_annotation:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_block_title_link_icon:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_flag:
+    weight: 105
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link_delegation:
+    weight: 110
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_paragraphs:
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_practices:
+    weight: 106
+    label: hidden
+    settings:
+      view_mode: country
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_text_image:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_block_practices:
+    weight: 107
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_image:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

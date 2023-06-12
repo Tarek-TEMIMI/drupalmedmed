@@ -1,0 +1,18 @@
+uuid: 1729854d-9ed1-42a8-982e-8ef013ffbfd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.push_member
+id: paragraph.push_member.created
+field_name: created
+entity_type: paragraph
+bundle: push_member
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

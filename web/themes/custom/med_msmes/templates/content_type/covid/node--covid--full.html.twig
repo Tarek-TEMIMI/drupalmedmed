@@ -1,0 +1,52 @@
+<section class="detail-covid-intro-bloc-wrapper">
+  <div class="detail-covid-intro-bloc">
+    <div class="covid-intro-logo" >
+      {{ content.field_icon_menu }}
+    </div>
+    <h1 class="detail-covid-title"><span>{{ label }}</span></h1>
+  </div>
+</section>
+
+<section class="detail-covid-bloc-wrapper detail-covid-top">
+  <div class="row">
+    <div class="col-md-3">
+      <!-- Menu left -->
+      <ul class="menu-left">
+        {% for item in menus_covid  %}
+          {{ drupal_entity('node', item.target_id, 'menu_covid') }}
+        {% endfor %}
+      </ul>
+      <!-- End Menu left -->
+    </div>
+    <div class="col-md-9 pd-0">
+      <div class="row">
+       
+        <div class="col-md-12 spe-covid resultat-description-wrapper mg-0 pd-0">
+          {{ content.body }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="detail-covid-bloc-wrapper detail-covid-responses">
+  <div class="d-md-flex justify-content-between">
+    {% if content.field_title_block_responses['#items'][0].value  %}
+    <div class="title-block">{{ content.field_title_block_responses }}</div>
+    {% endif %}
+    {% if node_faq_title  %}
+    <div class="link-block">
+      <a href="{{ node_faq_url }}" class="d-flex align-items-center">
+        <div class="link-icon">
+          <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/qr.png">
+        </div>
+        <div class="title-link">{{ node_faq_title }}</div>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+  <div class="list-detail-covid">
+    <div class="row">
+    {{ content.field_block_consult_responses }}
+    </div>
+  </div>
+</section>

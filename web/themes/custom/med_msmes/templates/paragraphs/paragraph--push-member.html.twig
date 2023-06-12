@@ -1,0 +1,20 @@
+{% block paragraph %}
+  <div class="col-12 col-lg-4 col-md-6 team-info-details">
+    {% block content %}
+      <span class="team-name">{{ content.field_name }}</span>
+
+      {% if content.field_job['#items'][0].value %}
+        <span class="team-job">{{ content.field_job }}</span>
+      {% endif %}
+
+      {% if content.field_function['#items'][0].value %}
+        <span class="team-job">{{ content.field_function }}</span>
+      {% endif %}
+
+      {% if content.field_mail['#items'][0].value %}
+        <span class="team-mail"><a href="{{ "mailto:" }}{{ content.field_mail['#items'][0].value }}">{{ content.field_mail }}</a></span>
+      {% endif %}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

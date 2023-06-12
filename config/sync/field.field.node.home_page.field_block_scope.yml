@@ -1,0 +1,73 @@
+uuid: dc658137-04c8-4700-978d-40e5ed2eea15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_scope
+    - node.type.home_page
+    - paragraphs.paragraphs_type.block_scope
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_block_scope
+field_name: field_block_scope
+entity_type: node
+bundle: home_page
+label: 'Block scope'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_scope: block_scope
+    target_bundles_drag_drop:
+      block_scope:
+        enabled: true
+        weight: 16
+      block_regional_initiatives:
+        weight: 17
+        enabled: false
+      card:
+        weight: 18
+        enabled: false
+      file:
+        weight: 19
+        enabled: false
+      link:
+        weight: 20
+        enabled: false
+      link_file:
+        weight: 21
+        enabled: false
+      push_member:
+        weight: 22
+        enabled: false
+      push_regional_initiatives:
+        weight: 23
+        enabled: false
+      slide:
+        weight: 24
+        enabled: false
+      text:
+        weight: 25
+        enabled: false
+      text_two_col:
+        weight: 26
+        enabled: false
+      title_icon_link:
+        weight: 27
+        enabled: false
+      title_left_text_right:
+        weight: 28
+        enabled: false
+      title_text:
+        weight: 29
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

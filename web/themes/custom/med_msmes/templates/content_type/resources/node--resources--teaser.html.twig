@@ -1,0 +1,17 @@
+{% if type_resource == 'news' %}
+  <li class="resources-link-item news-item">
+    <a  target="_blank" href="{{ content.field_link_1['#items'][0].url }}">
+      <span class="title-link-download"> {{ label }}</span>
+    </a>
+    <span class="description-download">{{ node.getCreatedTime()|date("d F Y") }}</span>
+    {{ content.field_tags }}
+  </li>
+{% else %}
+  <li class="resources-link-item">
+    <a target="_blank" href="{{ file_url(node.field_file.entity.uri.value) }}">
+      <span class="title-link-download">{{ label }}</span>
+      <span class="description-download">{{ content.field_sub_title }}</span>
+    </a>
+    {{ content.field_tags }}
+  </li>
+{% endif %}

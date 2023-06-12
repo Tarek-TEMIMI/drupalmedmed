@@ -1,0 +1,19 @@
+uuid: 9893c150-6759-442f-9a98-5edc03a034a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_block_link
+    - node.type.news
+id: node.news.field_title_block_link
+field_name: field_title_block_link
+entity_type: node
+bundle: news
+label: 'Title block link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

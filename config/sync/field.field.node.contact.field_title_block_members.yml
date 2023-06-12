@@ -1,0 +1,19 @@
+uuid: be086c8e-e743-4502-9e28-8d7dbe0e0b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_block_members
+    - node.type.contact
+id: node.contact.field_title_block_members
+field_name: field_title_block_members
+entity_type: node
+bundle: contact
+label: 'Title block members'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

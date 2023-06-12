@@ -1,0 +1,19 @@
+uuid: 6bcdc1e4-b60f-464c-8afd-3e2c5773c0ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_text_bottom_block_scope
+field_name: field_text_bottom_block_scope
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

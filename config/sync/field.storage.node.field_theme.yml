@@ -1,0 +1,36 @@
+uuid: c5f992fe-a5a8-49ff-a752-c7131f49c05b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_theme
+field_name: field_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Result_1
+      label: 'Result 1'
+    -
+      value: Result_2
+      label: 'Result 2'
+    -
+      value: Result_3
+      label: 'Result 3'
+    -
+      value: Result_4
+      label: 'Result 4'
+    -
+      value: Result_5
+      label: 'Result 5'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

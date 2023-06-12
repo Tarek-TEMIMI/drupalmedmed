@@ -1,0 +1,22 @@
+uuid: 7eaabca0-5515-4bb2-b93b-1b687f67fad9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - med_msmes
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: med_msmes_content
+theme: med_msmes
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

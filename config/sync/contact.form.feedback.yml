@@ -1,0 +1,14 @@
+uuid: 55671da3-1958-4fb4-83eb-03241d87c9a3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - admin@med-msmes.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

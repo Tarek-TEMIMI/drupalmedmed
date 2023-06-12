@@ -1,0 +1,86 @@
+.sba-intro-wrapper {
+  position: relative;
+  background-color: rgba(234, 238, 245, 0.4);
+  border-bottom: 2px solid #d7e2f0;
+}
+.sba-intro-wrapper .sba-intro-description {
+  text-align: center;
+  padding-top: 65px;
+  padding-bottom: 40px;
+}
+.sba-intro-description .sba-icon-wrapper {
+  padding-top: 12px;
+}
+.sba-icon-wrapper img {
+  width: 76px;
+  height: 76px;
+}
+.sba-intro-description .sba-intro-title {
+  font-size: 45px;
+  font-weight: 400;
+  color: #1a6aaa;
+}
+.form-wrapper {
+  width: 70%;
+  margin: 120px auto;
+}
+.form-group {
+  max-width: 540px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+div#edit-name--description,div#edit-pass--description {
+  color: #22428f;
+  font-size: 14px;
+  margin-top: 7px;
+  font-weight: 300;
+}
+.btn-form {
+  color: #fff;
+  background-color: #8fba53;
+  border: 1px solid #8fba53;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group label,.forgot-password {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1a6aaa;
+}
+.form-control {
+  border: 1px solid #cfd5e6;
+}
+.control-label:after {
+  content: "*";
+  color: #8fba53;
+  margin-left: 5px;
+}
+.espacesba .resource-content-wrapper {
+  padding: 70px 80px 0px 317px;
+  top: 0;
+}
+@media screen and (max-width: 991px){
+  .espacesba .resource-content-wrapper {
+    padding: 35px 40px 0px 190px !important;
+    top: 0px !important;
+}
+  div#edit-name--description,div#edit-pass--description {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 375px){
+  .espacesba .resource-content-wrapper {
+    padding: 35px 20px 0px 130px !important;
+    top: 0px !important;
+}
+}
+

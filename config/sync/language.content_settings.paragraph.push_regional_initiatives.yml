@@ -1,0 +1,18 @@
+uuid: e7c81d8a-8dee-4be5-bef6-448b580eb2b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.push_regional_initiatives
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.push_regional_initiatives
+target_entity_type_id: paragraph
+target_bundle: push_regional_initiatives
+default_langcode: site_default
+language_alterable: true

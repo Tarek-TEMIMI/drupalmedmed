@@ -1,0 +1,34 @@
+@import url('../font/font.css');
+@import url('reset.css');
+@import url('../lib/bootstrap.min.css');
+@import url('common-style.css');
+/*-----pages css------*/
+@import url('about.css');
+@import url('country.css');
+@import url('news_events.css');
+@import url('article.css');
+@import url('home.css');
+@import url('contact.css');
+@import url('resources.css');
+@import url('search.css');
+@import url('covid.css');
+@import url('faq.css');
+@import url('sba-login.css');
+
+
+/*programe scope Resultat 1,2,3,4,5*/
+@import url('resultat-style/resultat.css');
+@import url('resultat-style/resultat-2.css');
+@import url('resultat-style/resultat-3.css');
+@import url('resultat-style/resultat-4.css');
+@import url('resultat-style/resultat-5.css');
+/*-----component css------*/
+@import url('header.css');
+@import url('footer.css');
+@import url('slide.css');
+
+
+
+
+
+

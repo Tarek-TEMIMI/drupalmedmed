@@ -1,0 +1,51 @@
+<div class="container-wrapper">
+  <section class="covid-intro-wrapper">
+    <img class="covid-intro-bg" src="{{ file_url(node.field_image.entity.fileuri) }}">
+    <div class="covid-intro-description">
+      <h1 class="covid-intro-title">{{ label }}</h1>
+      <div class="covid-icon-wrapper">
+        <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/icon-header-covid.png">
+      </div>
+    </div>
+  </section>
+
+  <section class="covid-main">
+    <div class="covid-bloc-text">
+      <!-- start paragraph--text.html.twig -->
+      <div class="resultat-description-wrapper row one-col">
+        {% if  content.body['#items'].value %}
+        <div class="resultat-description col-12">
+              {{ content.body }}
+        </div>
+        {% endif %}
+      </div>
+      <!-- End start paragraph--text.html.twig -->
+    </div>
+    <div class="resource-bloc-wrapper">
+      <div class=" download-bloc-wrapper">
+        <div class="download-list-wrapper second-bloc">
+          <ul class="download-list">
+            {{ content.field_covid }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="detail-covid-responses-flag resultat-content-wrapper">
+    {% if content.field_title_bock_pays['#items'][0] %}
+    <div class="resultat-title">
+      <h2>{{ content.field_title_bock_pays }}</h2>
+    </div>
+    {% endif %}
+    {% if content.field_paragraphs['#items'] %}
+    <div class="resultat-flag-wrapper">
+      <ul class="flag-list-wrapper">
+        {{ content.field_paragraphs }}
+      </ul>
+    </div>
+    {% endif %}
+  </section>
+</div>

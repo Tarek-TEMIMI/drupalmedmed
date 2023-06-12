@@ -1,0 +1,98 @@
+uuid: 8bc7ece1-afbf-4d11-8616-60651577a512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.body
+    - field.field.node.events.field_block_title_link_icon
+    - field.field.node.events.field_date
+    - field.field.node.events.field_description
+    - field.field.node.events.field_image
+    - field.field.node.events.field_image_event
+    - field.field.node.events.field_location
+    - field.field.node.events.field_paragraphs
+    - node.type.events
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+id: node.events.default
+targetEntityType: node
+bundle: events
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_block_title_link_icon:
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_date:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_event:
+    weight: 108
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_location:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_paragraphs:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

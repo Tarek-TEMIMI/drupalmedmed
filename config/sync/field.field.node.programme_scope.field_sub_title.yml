@@ -1,0 +1,19 @@
+uuid: 1e4c270e-5935-481c-a5c9-f70513418fc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.programme_scope
+id: node.programme_scope.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: programme_scope
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

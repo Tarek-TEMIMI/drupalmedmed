@@ -1,0 +1,25 @@
+uuid: 430ca08b-8f2f-46f9-a634-39ae2d2c3b28
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_network:c88e71d6-10be-4f89-b4ea-fa92d825cda0'
+  module:
+    - block_content
+  theme:
+    - med_msmes
+id: socialnetwork_2
+theme: med_msmes
+region: header_top
+weight: -4
+provider: null
+plugin: 'block_content:c88e71d6-10be-4f89-b4ea-fa92d825cda0'
+settings:
+  id: 'block_content:c88e71d6-10be-4f89-b4ea-fa92d825cda0'
+  label: 'Social network'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

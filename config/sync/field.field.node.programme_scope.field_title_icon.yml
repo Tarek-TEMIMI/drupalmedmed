@@ -1,0 +1,19 @@
+uuid: 2793e2a9-5f75-4e8c-8f5f-971697271dd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_icon
+    - node.type.programme_scope
+id: node.programme_scope.field_title_icon
+field_name: field_title_icon
+entity_type: node
+bundle: programme_scope
+label: 'Title icon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

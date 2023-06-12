@@ -1,0 +1,58 @@
+uuid: ddd74da5-eb06-44b8-9be6-dd1196124d0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slides
+    - node.type.home_page
+    - paragraphs.paragraphs_type.slide
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_slides
+field_name: field_slides
+entity_type: node
+bundle: home_page
+label: Slides
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slide: slide
+    target_bundles_drag_drop:
+      slide:
+        enabled: true
+        weight: 11
+      card:
+        weight: 12
+        enabled: false
+      file:
+        weight: 13
+        enabled: false
+      link:
+        weight: 14
+        enabled: false
+      link_file:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      text_two_col:
+        weight: 17
+        enabled: false
+      title_icon_link:
+        weight: 18
+        enabled: false
+      title_left_text_right:
+        weight: 19
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

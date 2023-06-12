@@ -1,0 +1,18 @@
+uuid: f102f523-80a0-4264-ab5a-4e40e0a906f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block_consult_responses
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.block_consult_responses
+target_entity_type_id: paragraph
+target_bundle: block_consult_responses
+default_langcode: site_default
+language_alterable: true

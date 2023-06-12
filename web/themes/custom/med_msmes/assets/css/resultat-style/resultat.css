@@ -1,0 +1,381 @@
+/*----intro-----*/
+
+.resultat-intro-wrapper {
+  position: relative;
+}
+
+.resultat-intro-wrapper .resultat-intro-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.resultat-intro-wrapper .resultat-intro-icon {
+  text-align: center;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.resultat-intro-wrapper .resultat-intro-icon img {
+  width: 85px;
+  height: auto;
+}
+
+.resultat-intro-wrapper .resultat-intro-info {
+  text-align: center;
+  color: #fff;
+  padding: 20px 0 0px;
+}
+
+.resultat-intro-wrapper .resultat-intro-info h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.resultat-intro-wrapper .resultat-intro-info h1 {
+  font-size: 48px;
+  padding-top: 0px;
+  font-weight: 400;
+}
+/*----End intro-----*/
+/*resultat-content*/
+.resultat-content-wrapper {
+  position: relative;
+  padding: 90px 122px;
+}
+.resultat-1 .resultat-content-wrapper {
+  padding: 50px 112px 30px;
+}
+.resultat-content-wrapper .resultat-title {
+  position: relative;
+}
+.programme-scrope p{
+  margin-bottom: 30px;
+}
+/*text with deux colonne*/
+.resultat-content-wrapper .resultat-title::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 22px;
+  left: -122px;
+  background-image: url('../../images/resultat-double-tri.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.resultat-content-wrapper .resultat-title h2 {
+  font-size: 40px;
+  color: #1a6aaa;
+  padding-top: 40px;
+}
+.resultat-content-wrapper .resultat-description-wrapper {
+  color: #1a6aaa;
+  font-size: 18px;
+  padding-top: 40px;
+  font-weight: 300;
+}
+.resultat-1 .resultat-content-wrapper .resultat-description-wrapper {
+  padding-top: 30px;
+}
+.two-col .resultat-description:first-child {
+  padding-right: 45px;
+}
+.two-col .resultat-description:nth-child(2) {
+  padding-left: 45px;
+}
+/*announce card*/
+.resultat-content-wrapper .resultat-announce-card {
+  background-color: #62b19c;
+  color: #fff;
+  padding: 50px 50px 25px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  margin-top: 20px;
+  font-style: italic;
+}
+.resultat-content-wrapper .resultat-announce-card ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60px;
+  height: 30px;
+  background-image: url('../../images/half-hori-traingle-blue.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.programme-scrope .resultat-content-wrapper .resultat-announce-card p{
+  text-align: center;
+  margin-bottom: 0px;
+}
+/* text with icon */
+.resultat-description-wrapper.row.two-col.with-icon p::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 0;
+  background-image: url('../../images/triangle-green-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.resultat-description-wrapper.row.two-col.with-icon p {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px !important;
+}
+.resultat-description-wrapper.row.two-col.with-icon {
+  padding: 0;
+}
+/*bloc countries*/
+.resultat-flag-wrapper {
+  padding: 0;
+  padding-top: 40px;
+}
+.resultat-flag-wrapper .flag-list-wrapper .flag-item {
+  margin-bottom: 20px;
+}
+.resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-image {
+  width: 41px;
+  height: 26px;
+}
+.resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title {
+  font-size: 10px;
+  padding-top: 6px;
+  width: 41px;
+}
+.resultat-content-wrapper .resultat-sba-bloc-wrapper {
+  padding: 20px 0;
+}
+.resultat-flag-wrapper {
+  padding: 60px 10% 20px 10%;
+  padding-top: 60px;
+  margin: auto;
+  border-bottom: 1px solid #1a6aaa;
+}
+
+.resultat-flag-wrapper .flag-list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.resultat-flag-wrapper .flag-list-wrapper .flag-item {
+  width: 20%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-image {
+  width: 82px;
+  height: 52px;
+  margin-bottom: 12px;
+}
+
+.resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title {
+  font-size: 12px;
+  text-align: left;
+  color: #1a6aaa;
+  padding-top: 12px;
+  margin: auto!important;
+  width: 82px;
+  position: relative;
+}
+
+.resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title::before {
+  content: '';
+  width: 60%;
+  height: 1px;
+  position: absolute;
+  top: -0;
+  background-color: #1a6aaa;
+}
+/*End bloc countries*/
+/*bloc sba*/
+.resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link h2 {
+  font-size: 12px;
+}
+.resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link img {
+  padding-right: 6px;
+  width: 25px;
+  height: 25px;
+}
+
+.resultat-content-wrapper .resultat-sba-bloc-wrapper {
+  padding: 70px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link {
+  color: #1a6aaa;
+  margin: auto;
+  display: table;
+}
+
+.resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link img {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 12px;
+  width: 49px;
+  height: 49px;
+  object-fit: contain;
+}
+/*End bloc sba*/
+/*link*/
+.programme-scrope p a{
+  color:#1a6aaa;
+  text-decoration: underline;
+}
+/*Block custom link*/
+.programme-scrope .custom-link-wrapper .custom-link-items .custom-link-item p {
+  margin-bottom: 0 !important;
+}
+.programme-scrope .custom-link-wrapper .custom-link-items .item-link::before {
+  display: none;
+}
+.programme-scrope .custom-link-wrapper .custom-link-items a:hover {
+  font-weight: 600;
+}
+/*End resultat-content*/
+/*Block custom link resultat1*/
+.resultat-1 .custom-link-wrapper .custom-link-items {
+  background-color: #63b29d;
+}
+.resultat-1  .custom-link-wrapper .custom-link-items::before,.resultat-1 .custom-link-wrapper .custom-link-items::after {
+  background-image: url('../../images/download-resultat-1.png');
+}
+.resultat-1 .custom-link-wrapper .custom-link-items a:hover {
+  color: #1a6aaa;
+}
+/* responsive resultat */
+@media screen and (max-width:991px) {
+  .resultat-intro-wrapper .resultat-intro-icon img {
+      width: 92px;
+      height: 92px;
+  }
+  .resultat-intro-wrapper .resultat-intro-info h2 {
+      font-size: 15px;
+  }
+  .resultat-intro-wrapper .resultat-intro-info h1 {
+      font-size: 20px;
+      padding-top: 15px;
+  }
+  .resultat-content-wrapper {
+      padding: 40px 40px;
+  }
+  .resultat-1 .resultat-content-wrapper {
+    padding: 40px 40px;
+  }
+
+  .resultat-content-wrapper .resultat-title h2 {
+      font-size: 20px;
+      padding-top: 0
+  }
+  .programme-scrope p{
+    margin-bottom: 15px;
+  }
+  .resultat-content-wrapper .resultat-title::before {
+      width: 36px;
+      height: 36px;
+      top: -7px;
+      left: -40px;
+  }
+  .resultat-content-wrapper .resultat-description-wrapper {
+      font-size: 12px;
+      padding: 20px 0;
+      
+  }
+  .resultat-1 .resultat-content-wrapper .resultat-description-wrapper {
+    padding: 20px 0;
+  }
+  .two-col .resultat-description:first-child,.two-col .resultat-description:nth-child(2) {
+    padding-right: 0px;
+    padding-left: 0;
+  }
+  .resultat-content-wrapper .resultat-announce-card {
+      padding: 25px;
+      font-size: 15px;
+  }
+  .resultat-content-wrapper .resultat-announce-card ::before {
+      width: 30px;
+      height: 15px;
+  }
+  .resultat-content-wrapper .resultat-announce-card{
+    margin-top: 0px;
+  }
+  .resultat-flag-wrapper {
+    padding: 0;
+    padding-top: 40px;
+  }
+  .resultat-flag-wrapper .flag-list-wrapper .flag-item {
+      margin-bottom: 20px;
+  }
+  .resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-image {
+      width: 41px;
+      height: 26px;
+  }
+  .resultat-flag-wrapper .flag-list-wrapper .flag-item .flag-title {
+      font-size: 10px;
+      padding-top: 6px;
+      width: 41px;
+  }
+  .resultat-content-wrapper .resultat-sba-bloc-wrapper {
+      padding: 20px 0;
+  }
+  .resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link h2 {
+      font-size: 12px;
+  }
+  .resultat-content-wrapper .resultat-sba-bloc-wrapper .sba-link img {
+      padding-right: 6px;
+      width: 25px;
+      height: 25px;
+  }
+}
+/* responsive resultat */
+.color-1{
+  color:#1a6aaa;
+}
+.color-2 {
+  color: #6bb6a2 !important;
+}
+/****** programme-scrope style*****/
+
+.programmescope-annotation{
+  margin: 0px 112px 40px;
+  padding: 20px 20px 20px 0px;
+}
+
+.programmescope-annotation p {
+  font-size: 12.5px;
+  font-weight: 300;
+  margin-bottom: 0px !important;
+  color: #32317f;
+}
+.resultat-4 .programmescope-annotation p{
+color: #1a6aaa;;
+}
+
+
+

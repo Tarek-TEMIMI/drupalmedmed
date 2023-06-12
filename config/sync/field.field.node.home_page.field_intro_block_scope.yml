@@ -1,0 +1,21 @@
+uuid: fd7214cd-ace6-4223-80cb-d85bb9c1444d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_block_scope
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_intro_block_scope
+field_name: field_intro_block_scope
+entity_type: node
+bundle: home_page
+label: 'Intro block scope'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

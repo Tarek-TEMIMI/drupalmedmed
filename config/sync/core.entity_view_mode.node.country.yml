@@ -1,0 +1,10 @@
+uuid: 95802059-b3c3-40db-8322-05792994dd1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.country
+label: country
+targetEntityType: node
+cache: true

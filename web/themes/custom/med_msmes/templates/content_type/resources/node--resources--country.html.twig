@@ -1,0 +1,12 @@
+<li class="download-item">
+  {% if node.field_file.entity.uri.value is not empty  %}
+    {% set url = file_url(node.field_file.entity.uri.value) %}
+    {% else %}
+      {% set url = content.field_link_1['#items'][0].url %}
+  {% endif %}
+  <a target="_blank" class="download-link" href="{{ url }}">
+    <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/country-download-icon.png">
+    <p class="title">{{ label }}</p>
+    <span>{{"Download "|t}}</span>
+  </a>
+</li>

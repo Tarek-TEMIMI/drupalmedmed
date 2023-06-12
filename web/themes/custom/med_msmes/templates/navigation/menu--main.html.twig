@@ -1,0 +1,42 @@
+
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {% for item in items %}
+        {% if item.below %}
+          <li class="nav-item dropdown custom-icon">
+            <a class="{% if item.in_active_trail %}active {% endif %}nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+            <div class="dropdown-menu">
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            </div>
+          </li>
+        {% else %}
+          <li class="nav-item{% if not loop.first  %} custom-icon{% endif %}" >
+            <a class="{% if item.in_active_trail %}active {% endif %}nav-link" href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}<span class="sr-only">(current)</span></a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% elseif menu_level == 1 %}
+      {% for item in items %}
+        <a class="{% if item.in_active_trail %}active {% endif %}dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    {% else %}
+      {% for item in items %}
+        <li class="nav-item">
+          <a class="{% if item.in_active_trail %}active {% endif %}nav-link" href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}<span class="sr-only">(current)</span></a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+
+
+
+
+
+

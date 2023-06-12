@@ -1,0 +1,16 @@
+{% block paragraph %}
+  {% block content %}
+    <div class="col-md-6 list-detail-covid-push d-flex justify-content-between align-items-center">
+      <div class="link-left">
+        <a target="_blank" href="{{ file_url(content.field_file["#items"][0].entity.uri.value) }}">
+          <span class="detail-covid-push-title-link d-block">{{ content.field_title }}</span>
+          <span class="detail-covid-push--link d-block">Lien </span>
+        </a>
+        <a href="#" class="d-block tag-detail">{{ content.field_tag }}</a>
+      </div>
+      <a target="_blank" href="{{ file_url(content.field_file["#items"][0].entity.uri.value) }}" class="icon-right">
+        <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/icon-dowlod-detail.png">
+      </a>
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

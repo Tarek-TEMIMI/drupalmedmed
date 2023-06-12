@@ -1,0 +1,46 @@
+/*text with deux colonne */
+.resultat-4 .resultat-content-wrapper .resultat-title::before {
+  background-image: url('../../images/resultat-double-tri-resultat4.png');
+}
+.resultat-4 .resultat-content-wrapper .resultat-title h2 {
+  color: #1a6aaa;
+}
+.resultat-4 .resultat-content-wrapper .resultat-description-wrapper {
+  color: #1a6aaa;
+}
+.resultat-4 .resultat-content-wrapper{
+  padding: 10px 112px ;
+}
+/*announce card*/
+.resultat-4 .resultat-content-wrapper .resultat-announce-card {
+  background-color: #1a6aaa;
+}
+/* text with icon */
+.resultat-4 .resultat-description-wrapper.row.two-col.with-icon p::before {
+  background-image: url('../../images/triangle-blue.png');
+}
+/*text padding*/
+.resultat-4 .one-col .resultat-description.col-12 {
+  padding: 0;
+}
+/*link*/
+.programme-scrope.resultat-4 p a{
+  color:#1a6aaa;
+}
+
+/*Block custom link*/
+.resultat-4 .custom-link-wrapper .custom-link-items {
+  background-color: #86b0d2;
+}
+.resultat-4 .custom-link-wrapper .custom-link-items::before,.resultat-4 .custom-link-wrapper .custom-link-items::after {
+  background-image: url('../../images/download-resultat-1.png');
+}
+.resultat-4 .custom-link-wrapper .custom-link-items a:hover {
+  color: #1a6aaa;
+}
+
+@media screen and (max-width:991px){
+  .resultat-4 .resultat-content-wrapper{
+    padding: 40px 40px ;
+  }
+}

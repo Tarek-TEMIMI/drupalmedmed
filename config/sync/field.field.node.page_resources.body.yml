@@ -1,0 +1,23 @@
+uuid: 9d8d0f08-d51b-452f-a260-28c9a6246592
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page_resources
+  module:
+    - text
+id: node.page_resources.body
+field_name: body
+entity_type: node
+bundle: page_resources
+label: 'Text condition'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

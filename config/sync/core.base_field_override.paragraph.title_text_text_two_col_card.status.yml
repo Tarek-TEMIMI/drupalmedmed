@@ -1,0 +1,22 @@
+uuid: 44da349f-7003-4e06-a9f4-ee41e3348f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.title_text_text_two_col_card
+id: paragraph.title_text_text_two_col_card.status
+field_name: status
+entity_type: paragraph
+bundle: title_text_text_two_col_card
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

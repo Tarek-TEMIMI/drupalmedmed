@@ -1,0 +1,25 @@
+uuid: 9ebc6577-c3a7-4536-93ba-f3c8e2160d7f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9e34e1e2-07c7-424d-a20b-628141502811'
+  module:
+    - block_content
+  theme:
+    - med_msmes
+id: adressfooter
+theme: med_msmes
+region: second_footer
+weight: -6
+provider: null
+plugin: 'block_content:9e34e1e2-07c7-424d-a20b-628141502811'
+settings:
+  id: 'block_content:9e34e1e2-07c7-424d-a20b-628141502811'
+  label: 'Adress Footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

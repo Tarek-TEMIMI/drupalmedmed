@@ -1,0 +1,90 @@
+uuid: b8100a8e-e219-471c-945e-e48e154eb2c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resources.field_file
+    - field.field.node.resources.field_link_1
+    - field.field.node.resources.field_sub_title
+    - field.field.node.resources.field_tags
+    - field.field.node.resources.field_taxo_countries
+    - field.field.node.resources.field_taxo_programme_scope
+    - field.field.node.resources.field_type_resources
+    - node.type.resources
+  module:
+    - file
+    - link
+    - user
+id: node.resources.default
+targetEntityType: node
+bundle: resources
+mode: default
+content:
+  field_file:
+    weight: 101
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_link_1:
+    weight: 105
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sub_title:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tags:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_taxo_countries:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_taxo_programme_scope:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type_resources:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

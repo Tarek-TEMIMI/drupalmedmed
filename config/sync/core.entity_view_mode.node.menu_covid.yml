@@ -1,0 +1,10 @@
+uuid: 9c4d7096-3fe6-48fe-a8be-78f2ed4df6be
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.menu_covid
+label: 'menu covid'
+targetEntityType: node
+cache: true

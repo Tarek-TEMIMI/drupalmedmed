@@ -1,0 +1,28 @@
+.search-wrapper {
+  position: relative;
+  padding: 80px 80px 80px 80px;
+  top: 0;
+}
+.search-wrapper ul.resource-content-list {
+  min-height: 100%;
+}
+.search-wrapper h2 {
+  font-size: 40px;
+  color: #322c7f;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .search-wrapper h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .search-wrapper {
+    position: relative;
+    padding: 40px !important;
+    top: 0 !important;
+  }
+  #search-block-form .form-actions {
+    top: -14px !important;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: a29ebd7c-f720-41b5-b244-f1efe178d768
+langcode: en
+status: true
+dependencies: {  }
+id: push_regional_initiatives
+label: 'Push regional initiatives'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

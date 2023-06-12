@@ -1,0 +1,158 @@
+.contact-intro-wrapper {
+  position: relative;
+  background-color: #eaeef5;
+  /* height: 310px; */
+  border-bottom: 2px solid #d7e2f0;
+}
+.contact-intro-wrapper .contact-intro-description {
+  text-align: center;
+  padding-top: 65px;
+  padding-bottom: 40px;
+}
+.contact-intro-description .contact-intro-title {
+  font-size: 43px;
+  font-weight: 400;
+  color: #1a6aaa;
+}
+.contact-intro-description .contact-icon-wrapper{
+  padding-top: 12px;
+}
+.contact-icon-wrapper img {
+  width: 76px;
+  height: 76px;
+}
+.contact-content {
+  padding: 54px 60px 60px 100px;
+}
+h2.contact-title {
+  position: relative;
+  color: #8fba53;
+  font-size: 40px;
+  font-weight: 300;
+  padding-left: 35px;
+  margin-top: 45px;
+  z-index:-1;
+}
+h2.contact-title::before {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 9px;
+  left: 0;
+  background-image: url(../images/icon-title-contact.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.contact-content a{
+  color: #32317f;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.contact-details {
+  padding: 50px 23px;
+  color: #32317f;
+  font-size: 18px;
+  font-weight: 300;
+}
+.contact-adress,.contact-tel,.contact-web{
+  margin-bottom: 30px;
+}
+.contact-tel {
+  position: relative;
+  padding-left: 35px;
+}
+.contact-tel::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 0;
+  background-image: url(../images/tel.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.team-info-details span{
+  display: block;
+  padding-left: 25px;
+  line-height: 24px;
+  min-height: 20px;
+}
+span.team-name {
+  position: relative;
+  font-weight: 400;
+}
+span.team-name::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 4px;
+  left: 0;
+  background-image: url(../images/icon-team-name.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.team-info-bloc .contact-details {
+  padding-left: 0;
+}
+.col-lg-4.team-info-details {
+  padding-left: 10px !important;
+}
+.team-info-details {
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 991px)
+{
+  .contact-intro-description .contact-intro-title {
+    font-size: 28px;
+  }
+  .contact-icon-wrapper img {
+    width: 66px;
+    height: 66px;
+  }
+}
+@media screen and (max-width:991px) {
+  .contact-content {
+    padding: 30px;
+   }
+   h2.contact-title {
+    font-size: 22px;
+    margin-top: 35px;
+  }
+  h2.contact-title::before {
+    width: 20px;
+    height: 20px;
+    top: 1px;
+  }
+  .contact-details {
+    font-size: 14px;
+    padding: 25px 12px;
+  }
+  .contact-tel::before {
+    width: 18px;
+    height: 18px;
+  }
+  .contact-content a {
+    font-size: 14px;
+  }
+    .team-info-details {
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width:992px) {
+  .team-info-bloc h2.contact-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .team-info-bloc {
+    margin-top: -80px;
+  }
+  .team-info-bloc .contact-details {
+    padding-top: 75px;
+  }
+}

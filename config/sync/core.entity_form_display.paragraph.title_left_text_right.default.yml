@@ -1,0 +1,34 @@
+uuid: 8649be6c-2b34-4f46-a743-5dc0e3e91c10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_left_text_right.field_texte
+    - field.field.paragraph.title_left_text_right.field_title
+    - paragraphs.paragraphs_type.title_left_text_right
+  module:
+    - text
+id: paragraph.title_left_text_right.default
+targetEntityType: paragraph
+bundle: title_left_text_right
+mode: default
+content:
+  field_texte:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

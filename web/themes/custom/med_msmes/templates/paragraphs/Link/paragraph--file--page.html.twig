@@ -1,0 +1,7 @@
+{% if content.field_file["#items"][0].entity.uri.value %}
+    {% block paragraph %}
+      {% block content %}
+        <a target="_blank" class="item-link" href="{{ file_url(content.field_file["#items"][0].entity.uri.value) }}">{{ content.field_title }}</a>
+      {% endblock %}
+    {% endblock paragraph %}
+{% endif %}

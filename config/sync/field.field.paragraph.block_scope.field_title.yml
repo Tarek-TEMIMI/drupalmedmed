@@ -1,0 +1,19 @@
+uuid: 489e250a-f26f-459e-bab9-c9fde98979be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.block_scope
+id: paragraph.block_scope.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: block_scope
+label: 'Title icon'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+{#{{ dump(current_nid) }}#}
+{#{{ dump(node.id) }}#}
+<li class="item-menu-left{% if current_nid == node.id %} active{% endif %}">
+  <div class="icon-menu-left">
+    <div class="bg-icon-menu-left">
+      {{ content.field_icon_menu }}
+    </div>
+  </div>
+  <a href="{{ url }}" class="link-menu-left">{{ label }}</a>
+</li>

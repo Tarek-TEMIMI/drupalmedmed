@@ -1,0 +1,29 @@
+uuid: e8766677-f76f-4a8a-84c3-ffd780b5bc64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_file.field_paragraphs
+    - paragraphs.paragraphs_type.link_file
+  module:
+    - paragraphs
+id: paragraph.link_file.default
+targetEntityType: paragraph
+bundle: link_file
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true

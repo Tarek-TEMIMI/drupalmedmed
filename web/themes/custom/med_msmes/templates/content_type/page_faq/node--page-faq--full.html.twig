@@ -1,0 +1,23 @@
+<section class="faq-intro-wrapper">
+  <div class="faq-intro-description">
+    <h1 class="faq-intro-title">{{ label }}</h1>
+    <div class="faq-icon-wrapper">
+      <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/img-faq.png">
+    </div>
+  </div>
+</section>
+
+<section class="faq-bloc-wrapper">
+  <div class="row">
+    <div class="col-md-3">
+      <!-- Menu left -->
+      <ul class="menu-left">
+        {% for item in menus_covid  %}
+          {{ drupal_entity('node', item.target_id, 'menu_covid') }}
+        {% endfor %}
+      </ul>
+      <!-- End Menu left -->
+    </div>
+    {{ faq }}
+
+</section>

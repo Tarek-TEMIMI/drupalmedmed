@@ -1,0 +1,21 @@
+<div class="row about-info-bloc">
+  {% block paragraph %}
+    {% block content %}
+      <div class="col-12 col-lg-4">
+        <div class="table">
+          <div class="about-content-icon">
+            <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/triangle-blue.png" />
+            <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/triangle-green.png" />
+            <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/triangle-blue.png" />
+          </div>
+          <div class="about-content-title">
+            <h2> {{ content.field_title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8 about-content-description">
+        {{ content.field_texte }}
+      </div>
+    {% endblock %}
+  {% endblock paragraph %}
+</div>

@@ -1,0 +1,15 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      assets/css/style.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css: {type: external, minified: true, weight: -20 }
+  js:
+    assets/js/bootstrap.min.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js: {type: external, minified: true, weight: -20 }
+    https://platform-api.sharethis.com/js/sharethis.js#property=5e8f40447966f10012731d52&product=st-custom-button: {type: external, minified: true, weight: -20 }
+    assets/js/index.js: {}
+    assets/js/slide.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

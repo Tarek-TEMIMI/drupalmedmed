@@ -1,0 +1,23 @@
+uuid: 5d457b96-6d05-44cb-abc0-e64f1f37de00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.push_regional_initiatives
+  module:
+    - link
+id: paragraph.push_regional_initiatives.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: push_regional_initiatives
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

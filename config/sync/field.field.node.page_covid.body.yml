@@ -1,0 +1,23 @@
+uuid: be646057-4a1b-46c8-84d0-b1c4b303235e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page_covid
+  module:
+    - text
+id: node.page_covid.body
+field_name: body
+entity_type: node
+bundle: page_covid
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,14 @@
+uuid: 6e96eed2-63b3-418b-a46b-dd9ffed573ae
+name: 'MED msmes'
+mail: admin@med-msmes.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/13
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

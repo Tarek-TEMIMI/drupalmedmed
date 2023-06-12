@@ -1,0 +1,23 @@
+uuid: f2540bb9-aabf-4e33-9fb3-3dcc02765df2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.covid
+  module:
+    - text
+id: node.covid.body
+field_name: body
+entity_type: node
+bundle: covid
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

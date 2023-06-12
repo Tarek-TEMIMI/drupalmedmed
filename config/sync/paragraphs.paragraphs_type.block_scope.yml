@@ -1,0 +1,10 @@
+uuid: 1f8826f4-1854-4d26-9922-3b8c052330ec
+langcode: en
+status: true
+dependencies: {  }
+id: block_scope
+label: 'Block scope'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

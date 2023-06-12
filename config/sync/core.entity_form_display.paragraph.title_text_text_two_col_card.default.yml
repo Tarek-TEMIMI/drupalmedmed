@@ -1,0 +1,38 @@
+uuid: 91d3a0b7-2209-48e4-94f7-22c14b6b3f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_text_text_two_col_card.field_paragraphs
+    - field.field.paragraph.title_text_text_two_col_card.field_title
+    - paragraphs.paragraphs_type.title_text_text_two_col_card
+  module:
+    - paragraphs
+id: paragraph.title_text_text_two_col_card.default
+targetEntityType: paragraph
+bundle: title_text_text_two_col_card
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

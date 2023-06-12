@@ -1,0 +1,18 @@
+uuid: ee21c61a-9b59-48b3-8fc3-e14e1fc3ce6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.title_text_text_two_col_card
+id: paragraph.title_text_text_two_col_card.created
+field_name: created
+entity_type: paragraph
+bundle: title_text_text_two_col_card
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

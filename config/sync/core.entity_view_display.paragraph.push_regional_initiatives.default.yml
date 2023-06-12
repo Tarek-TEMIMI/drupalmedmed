@@ -1,0 +1,45 @@
+uuid: c4115855-bc1c-4588-b2d7-37bef116366b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.push_regional_initiatives.field_link
+    - field.field.paragraph.push_regional_initiatives.field_texte
+    - field.field.paragraph.push_regional_initiatives.field_title
+    - paragraphs.paragraphs_type.push_regional_initiatives
+  module:
+    - link
+    - text
+id: paragraph.push_regional_initiatives.default
+targetEntityType: paragraph
+bundle: push_regional_initiatives
+mode: default
+content:
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_texte:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,43 @@
+uuid: 654c216b-36f6-470b-b972-b41feefd7027
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partner_countries
+    - field.field.block_content.partner_countries.field_url
+  module:
+    - link
+id: block_content.partner_countries.default
+targetEntityType: block_content
+bundle: partner_countries
+mode: default
+content:
+  field_url:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

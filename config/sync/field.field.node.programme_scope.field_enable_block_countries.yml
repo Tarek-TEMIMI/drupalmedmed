@@ -1,0 +1,23 @@
+uuid: 6b7aa514-5ef7-4e2c-aecf-a74223d16f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_block_countries
+    - node.type.programme_scope
+id: node.programme_scope.field_enable_block_countries
+field_name: field_enable_block_countries
+entity_type: node
+bundle: programme_scope
+label: 'Enable block countries'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

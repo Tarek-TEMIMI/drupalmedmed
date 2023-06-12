@@ -1,0 +1,16 @@
+<div class="container-wrapper">
+  <section class="resources-intro-wrapper">
+    <div class="resources-intro-description">
+      <h1 class="resources-intro-title">{{ label }}</h1>
+      {% if content.field_sub_title['#items'][0].value  %}
+        <h2 class="title">{{ content.field_sub_title }}</h2>
+      {% endif %}
+      <div class="resourcesabout-icon-wrapper">
+        <img src="{{ base_url }}/themes/custom/med_msmes/assets/images/resources-intro-icon.png">
+      </div>
+    </div>
+  </section>
+  <section class="main-resources espacesba">
+    {{ folder }}
+  </section>
+</div>

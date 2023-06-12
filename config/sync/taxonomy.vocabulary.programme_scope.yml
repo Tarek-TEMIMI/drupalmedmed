@@ -1,0 +1,8 @@
+uuid: 6df96b87-6f5c-4f94-84b2-f29a3a6876c1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Programme Scope'
+vid: programme_scope
+description: ''
+weight: 0

@@ -1,0 +1,41 @@
+uuid: 41c773d2-e5b7-4bc1-bcfd-4cb94e56b23e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page_search.body
+    - field.field.node.page_search.field_image
+    - node.type.page_search
+  module:
+    - image
+    - text
+    - user
+id: node.page_search.default
+targetEntityType: node
+bundle: page_search
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

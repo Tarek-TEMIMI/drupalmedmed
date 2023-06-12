@@ -1,0 +1,19 @@
+uuid: 61615825-f984-4d6a-890c-f15071549b93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annotation
+    - node.type.country
+id: node.country.field_annotation
+field_name: field_annotation
+entity_type: node
+bundle: country
+label: Annotation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

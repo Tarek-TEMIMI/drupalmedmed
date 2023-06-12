@@ -1,0 +1,19 @@
+uuid: 34dbb3f9-7390-4433-94cb-394fdd88bd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_web
+    - node.type.contact
+id: node.contact.field_site_web
+field_name: field_site_web
+entity_type: node
+bundle: contact
+label: 'Site web'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

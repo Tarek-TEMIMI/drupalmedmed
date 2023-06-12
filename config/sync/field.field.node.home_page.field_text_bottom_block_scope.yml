@@ -1,0 +1,21 @@
+uuid: 680702eb-ef83-4824-b381-84964a40aaf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_bottom_block_scope
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_text_bottom_block_scope
+field_name: field_text_bottom_block_scope
+entity_type: node
+bundle: home_page
+label: 'Text bottom block scope'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

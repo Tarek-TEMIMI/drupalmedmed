@@ -1,0 +1,10 @@
+uuid: 5626ac4b-0f78-4de4-a2fe-0ec0a1e61a2c
+langcode: en
+status: true
+dependencies: {  }
+id: block_consult_responses
+label: 'Block Consult responses'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,49 @@
+uuid: 8110b5b8-3be8-46da-b309-3780eea7cb77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.folder.field_file
+    - field.field.node.folder.field_sub_title
+    - field.field.node.folder.field_tags
+    - node.type.folder
+  module:
+    - file
+    - user
+id: node.folder.default
+targetEntityType: node
+bundle: folder
+mode: default
+content:
+  field_file:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_sub_title:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tags:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,42 @@
+uuid: f858115a-fabb-40bc-9dec-f8b201eb65e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_two_col.field_enable_icon
+    - field.field.paragraph.text_two_col.field_text_1
+    - field.field.paragraph.text_two_col.field_text_2
+    - paragraphs.paragraphs_type.text_two_col
+  module:
+    - text
+id: paragraph.text_two_col.default
+targetEntityType: paragraph
+bundle: text_two_col
+mode: default
+content:
+  field_enable_icon:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_text_1:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_2:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

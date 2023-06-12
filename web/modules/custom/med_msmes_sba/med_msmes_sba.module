@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains med_msmes_sba.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\node\Entity\Node;
+
+
+
+/**
+ * Implements hook_help().
+ */
+function med_msmes_sba_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the med_msmes_sba module.
+    case 'help.page.med_msmes_sba':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+// * Implements hook_form_alter().
+// */
+function med_msmes_sba_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// // kint($form['#form_id']);
+//  var_dump($form['#form_id']);
+//  die;
+  if ($form['#form_id'] == 'user_login_form') {
+    $form['#theme'][] = 'form_login_user_sba';
+    $form['mail_admin'] = \Drupal::config('system.site')->get('mail');;
+    $form['name']['#attributes']['class'][] = 'form-control';
+    $form['pass']['#attributes']['class'][] = 'form-control';
+  }
+}
+
+function med_msmes_sba_theme($existing, $type, $theme, $path) {
+  return [
+    'form_login_user_sba' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function med_msmes_sba_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal\Core\Session\AccountInterface $account) {
+
+  if(\Drupal::routeMatch()->getRouteName() != 'entity.node.canonical') {
+    return \Drupal\Core\Access\AccessResult::neutral();
+  }
+
+  if($account->isAuthenticated() && $node->getType() == 'page_folder' && (in_array('sba', $account->getRoles()) || in_array('administrator', $account->getRoles()))) {
+    return \Drupal\Core\Access\AccessResult::neutral();
+  }elseif ($node->getType() == 'page_folder'){
+    return \Drupal\Core\Access\AccessResult::forbidden();
+  }
+}
+
+
+///**
+// * Implements hook_user_login().
+// */
+function med_msmes_sba_user_login(\Drupal\user\UserInterface $account) {
+  if($account->isAuthenticated()  && in_array('sba', $account->getRoles())) {
+    $path = '/';
+    $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'page_folder', '=');
+    $nids = $query->execute();
+    $nid = reset($nids);
+    $node = Node::load($nid);
+    if (is_object($node)) {
+      if ($node->hasTranslation($lang)) {
+        $node = $node->getTranslation($lang);
+      }
+      $path = $node->toUrl()->setAbsolute()->toString();
+    }
+
+    $response = new \Symfony\Component\HttpFoundation\RedirectResponse ($path);
+    $response->send();
+  }
+
+}

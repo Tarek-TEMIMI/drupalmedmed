@@ -1,0 +1,19 @@
+uuid: dd5be95d-bd2b-48c2-9fa9-bf56a564f40c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_block_responses
+    - node.type.covid
+id: node.covid.field_title_block_responses
+field_name: field_title_block_responses
+entity_type: node
+bundle: covid
+label: 'Title block responses'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

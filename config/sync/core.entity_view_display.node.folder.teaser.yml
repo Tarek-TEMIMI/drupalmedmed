@@ -1,0 +1,58 @@
+uuid: b5942637-b57e-40f5-afb0-999d805f5474
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.folder.field_file
+    - field.field.node.folder.field_sub_title
+    - field.field.node.folder.field_tags
+    - node.type.folder
+  module:
+    - file
+    - user
+id: node.folder.teaser
+targetEntityType: node
+bundle: folder
+mode: teaser
+content:
+  field_file:
+    type: file_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_sub_title:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  langcode:
+    type: language
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

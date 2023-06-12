@@ -1,0 +1,52 @@
+uuid: f20b129a-d7b4-4c61-ab3d-5bb3af433bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page
+    - paragraphs.paragraphs_type.title_left_text_right
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page
+label: Contenu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_left_text_right: title_left_text_right
+    target_bundles_drag_drop:
+      title_left_text_right:
+        enabled: true
+        weight: 9
+      card:
+        weight: 10
+        enabled: false
+      file:
+        weight: 11
+        enabled: false
+      link:
+        weight: 12
+        enabled: false
+      link_file:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      text_two_col:
+        weight: 15
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

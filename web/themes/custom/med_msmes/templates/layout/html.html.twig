@@ -1,0 +1,142 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+  <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <!--[if !IE]>-->
+    {# <link rel="stylesheet" type="text/css" href="{{ base_url }}/themes/custom/med_msmes/assets/css/ie.css"> #}
+    <!--<![endif]-->
+    {% if currentLanguage == 'ar' %}
+      <style>
+        .dropdown-menu.show {
+          display: block !important;
+          position: absolute !important;
+          width: 300px !important;
+          right: 0px !important;
+          text-align: right !important;
+        }
+        #st_gdpr_iframe {
+          left : 0 !important;
+        }
+        .download-list {
+          text-align: center !important;
+        }
+        *:not(.contact-intro-wrapper):not(.contact-intro-description):not(.contact-intro-title):not(.contact-icon-wrapper):not(.download-item):not(.title):not(.covid-intro-description):not(.covid-intro-title):not(.covid-icon-wrapper):not(.scoope-info-subtitle):not(.resultat-intro-icon):not(.resultat-intro-info):not(.subtitle):not(.about-intro-title):not(.about-intro-subtitle):not(.about-icon-wrapper):not(.about-intro-wrapper):not(.block-images):not(.block-images-content):not(.about-intro-description):not(.block-images-image):not(.block-images-description):not(.slide-title):not(.resources-intro-wrapper):not(.resources-intro-description):not(.resources-intro-title):not(.resourcesabout-icon-wrapper):not(.option) {
+          text-align: right !important;
+          direction : rtl !important;
+        }
+
+        *::before {
+          -webkit-transform: rotate(180deg);
+        }
+        .nav-link::before {
+          -webkit-transform: rotate(0deg) !important;
+        }
+
+        .resultat-announce-card ::before {
+          -webkit-transform: rotate(0deg) !important;
+        }
+
+        .nav-link::before {
+          right: -30px;
+          left: unset !important;
+        }
+        .resultat-content-wrapper .resultat-title::before {
+          right: -122px;
+          left: unset !important;
+        }
+
+        .resultat-description-wrapper.row.two-col.with-icon p::before {
+          right: -30px;
+          left: unset !important;
+        }
+
+        .title-vert-violet .sub-title h2::before {
+          right: -40px;
+          left: unset !important;
+        }
+
+        .title-green-violet .sub-title h2::before {
+          right: -40px;
+          left: unset !important;
+        }
+
+        .about-content .about-info-bloc .about-content-description ul li::before {
+          right: -40px;
+          left: unset !important;        
+          -webkit-transform: rotate(0deg) !important;
+        }
+
+        h2.contact-title::before {
+          right: -40px;
+          left: unset !important;        
+        }
+
+        .contact-tel::before {
+          right: -30px;
+          left: unset !important;        
+          -webkit-transform: rotate(0deg) !important;
+        }
+
+        span.team-name::before {
+          right: -40px;
+          left: unset !important;        
+        }
+
+        .info-bloc-title-wrapper::before {
+          right: -115px;
+          left: unset !important;    
+        }
+
+        .custom-link-wrapper .custom-link-items::before {-webkit-transform: rotate(0deg) !important;}
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endif %}
+
+  </head>
+
+<body{{ attributes }}>
+{#
+  Keyboard navigation/accessibility link to main content section in
+  page.html.twig.
+#}
+<a href="#main-content" class="visually-hidden focusable">
+  {{ 'Skip to main content'|t }}
+</a>
+{{ page_top }}
+{{ page }}
+{{ page_bottom }}
+<js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
+
+</body>
+</html>

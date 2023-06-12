@@ -1,0 +1,27 @@
+uuid: 9a9e1a4e-9bd9-4f9c-9dad-45080a8e90ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.folder
+  module:
+    - file
+id: node.folder.field_file
+field_name: field_file
+entity_type: node
+bundle: folder
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

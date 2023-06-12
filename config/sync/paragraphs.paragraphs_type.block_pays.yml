@@ -1,0 +1,10 @@
+uuid: cc2428e7-ff53-458d-a7e0-5a5a57c4c7dd
+langcode: en
+status: true
+dependencies: {  }
+id: block_pays
+label: 'block pays'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

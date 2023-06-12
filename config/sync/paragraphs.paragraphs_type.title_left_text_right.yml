@@ -1,0 +1,10 @@
+uuid: 58221e9a-474f-4129-82cf-8d8045545cbc
+langcode: en
+status: true
+dependencies: {  }
+id: title_left_text_right
+label: 'Title left - Text right'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

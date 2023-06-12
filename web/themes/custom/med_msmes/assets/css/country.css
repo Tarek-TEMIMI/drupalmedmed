@@ -1,0 +1,434 @@
+/*-------country page  style----------*/
+
+.country-intro-bloc-wrapper {
+  background-color: #fafcfc;
+  padding: 70px 0;
+}
+
+.country-intro-bloc-wrapper .country-intro-bloc {
+  text-align: center;
+}
+
+.country-intro-bloc-wrapper .country-intro-bloc .country-intro-logo {
+  width: 160px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.country-intro-bloc-wrapper .country-intro-bloc .country-title {
+  font-size: 50px;
+  color: #1a6aaa;
+  font-weight: normal;
+  padding-top: 20px;
+}
+
+.country-intro-bloc-wrapper .country-intro-bloc .country-title span {
+  position: relative;
+}
+
+.country-intro-bloc-wrapper .country-intro-bloc .country-title span::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #1a6aaa;
+  position: absolute;
+  bottom: -22px;
+}
+.coordinator-bloc-img-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #322c7f;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.country-coordinator-bloc {
+  font-size: 18px;
+  color: #322c7f;
+  padding: 0 120px 60px;
+  background-color: #fafcfc;
+  font-weight: 300;
+}
+
+.country-coordinator-bloc .first-parag {
+  margin-bottom: 40px;
+}
+
+.country-coordinator-bloc .country-user-information {
+  display: table;
+}
+
+.country-coordinator-bloc .country-user-information .user-image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  height: 255px;
+  object-fit: contain;
+  margin-right: 50px;
+}
+
+.country-coordinator-bloc .country-user-information .user-information {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.country-working-bloc {
+  padding: 0 120px;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.country-working-bloc::before {
+  content: '';
+  width: 59px;
+  height: 29px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url('../images/half-hori-triangle-green.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.main-country p{
+  color: #322c7f;
+}
+
+.main-country .resultat-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #322c7f;
+  text-align: center;
+  padding-top: 70px;
+  margin-bottom: 65px;
+}
+.resultat-description-wrapper {
+  color: #1a6aaa;
+  font-size: 18px;
+  font-weight: 300;
+}
+.two-col .resultat-description:first-child {
+  padding-right: 45px;
+}
+.two-col .resultat-description:nth-child(2) {
+  padding-left: 45px;
+}
+@media screen and (max-width: 991px){
+  .two-col .resultat-description:first-child,.two-col .resultat-description:nth-child(2),.resultat-description.col-12 {
+    padding-right: 0px;
+    padding-left: 0;
+  }
+  .main-country .resultat-title h2 {
+      font-size: 20px;
+      padding-top: 35px;
+      margin-bottom: 20px;
+  }
+  .resultat-description-wrapper {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+}
+
+/*****resuable bloc***/
+
+.download-bloc-wrapper {
+  background-color: #fafcfc;
+  position: relative;
+}
+
+.download-bloc-wrapper::before {
+  content: '';
+  width: 59px;
+  height: 29px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url('../images/half-hori-triangle-green.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.download-bloc-wrapper .download-title {
+  font-size: 37px;
+  color: #322c7f;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.download-bloc-wrapper .download-list-wrapper {
+  padding: 50px 0
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc {
+  background-color: #ffffff;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item {
+  /* width: 12%; */
+  text-align: center;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item .download-link:hover {
+  text-decoration: none;
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item img {
+  height: 86px;
+  width: 86px;
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item .title {
+  position: relative;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item .download-link:hover .title {
+  color: #322c7f;
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item .download-link:hover .title::before {
+  background-image: url('../images/icon-plus-green.png');
+}
+
+.download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item .title::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url('../images/icon-plus-blue.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item img {
+  height: 53px;
+  width: 53px;
+  object-fit: contain;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #322c7f;
+  padding-top: 25px;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item span {
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  color: #322c7f;
+  padding-top: 30px;
+  display: block;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item span::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url('../images/triangle-green-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.download-bloc-wrapper .download-list-wrapper .download-list .download-item .download-link:hover .title, .download-bloc-wrapper .download-list-wrapper .download-list .download-item .download-link:hover span {
+  color: #63b29d;
+}
+
+.download-bloc-wrapper .last-sub-title {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #63b29d;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.download-bloc-wrapper .last-sub-title:hover {
+  color: #322c7f;
+}
+
+.delegation {
+  background-color: #ffffff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+  padding-top: 50px;
+}
+.country-annotation {
+  margin: 0 120px 40px;
+  padding: 20px 20px 20px 0px;
+  border-top: 1px solid #63b29d;
+}
+.country-annotation p {
+  color: #322c7f;
+  font-size: 12.5px;
+  font-weight: 300;
+  margin-bottom: 0px !important;
+}
+/*****resuable bloc***/
+
+@media screen and (max-width:991px) {
+  .country-annotation {
+    margin: 0 30px 20px;
+  }
+  .country-annotation p {
+    font-size: 11px;
+  }
+  .country-intro-bloc-wrapper {
+    padding: 35px 0;
+  }
+  .country-intro-bloc-wrapper .country-intro-bloc .country-intro-logo {
+    width: 80px;
+    height: 41px;
+  }
+  .country-intro-bloc-wrapper .country-intro-bloc .country-title {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  .country-intro-bloc-wrapper .country-intro-bloc .country-title span::before {
+    bottom: -10px;
+  }
+  .coordinator-bloc-img-title h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+  .country-coordinator-bloc {
+    font-size: 12px;
+    padding: 0 30px 30px;
+  }
+  .country-coordinator-bloc .first-parag {
+    margin-bottom: 20px;
+  }
+  .country-coordinator-bloc .country-user-information {
+    display: block;
+  }
+  .country-coordinator-bloc .country-user-information .user-image {
+    width: 95px;
+    height: 127px;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .country-working-bloc {
+    padding: 0 30px;
+  }
+  .country-working-bloc::before {
+    width: 30px;
+    height: 15px;
+  }
+  .country-working-bloc .country-working-title {
+    font-size: 20px;
+    padding-top: 35px;
+    margin-bottom: 30px;
+  }
+  .country-working-bloc .country-working-parags p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .country-working-bloc .country-working-list-wrapper {
+    margin-bottom: 30px;
+  }
+  .country-working-bloc .country-working-list-wrapper .country-working-list {
+    display: block;
+  }
+  .country-working-bloc .country-working-list-wrapper .country-working-list .country-working-item {
+    padding-left: 20px;
+    width: 100%;
+    padding-right: 20px;
+  }
+  .country-working-bloc .country-working-list-wrapper .country-working-list .country-working-item p {
+    font-size: 12px;
+  }
+  .country-working-bloc .country-working-list-wrapper .country-working-list .country-working-item::before {
+    width: 10px;
+    height: 10px;
+  }
+  /*****resuable bloc***/
+  .download-bloc-wrapper .download-list-wrapper .download-list {
+    flex-wrap: wrap;
+  }
+  .download-bloc-wrapper::before {
+    width: 30px;
+    height: 15px;
+  }
+  .download-bloc-wrapper .download-title {
+    font-size: 18px;
+    padding-top: 40px;
+  }
+  .download-bloc-wrapper .download-list-wrapper {
+    padding: 25px 0
+  }
+  .download-bloc-wrapper .download-list-wrapper .download-list .download-item img {
+    height: 26px;
+    width: 26px;
+  }
+  .download-bloc-wrapper .download-list-wrapper .download-list .download-item .title {
+    font-size: 8px;
+    padding-top: 12px;
+  }
+  .download-bloc-wrapper .download-list-wrapper .download-list .download-item span {
+    font-size: 8px;
+    padding-top: 15px;
+  }
+  .download-bloc-wrapper .download-list-wrapper .download-list .download-item span::before {
+    width: 10px;
+    height: 10px;
+    top: 2px;
+  }
+  .download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item img {
+    height: 43px;
+    width: 43px;
+  }
+  .download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item .title::before {
+    height: 13px;
+    width: 13px;
+    top: 33px;
+  }
+  .download-bloc-wrapper .last-sub-title {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+  .download-bloc-wrapper .download-list-wrapper.second-bloc {
+    margin-bottom: 30px;
+  }
+  .download-bloc-wrapper .download-list-wrapper.second-bloc .download-list .download-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .download-bloc-wrapper .download-list-wrapper .download-list .download-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*****resuable bloc***/
+
+/*-------country page  style----------*/

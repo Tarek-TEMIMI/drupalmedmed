@@ -1,0 +1,29 @@
+uuid: f8ae4ca1-646c-46c7-a6f3-bec00075af19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxo_countries
+    - node.type.resources
+    - taxonomy.vocabulary.country
+id: node.resources.field_taxo_countries
+field_name: field_taxo_countries
+entity_type: node
+bundle: resources
+label: Countries
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

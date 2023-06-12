@@ -1,0 +1,55 @@
+uuid: 8ba010b9-d5e7-4fcc-b2b4-a4d7af9a9639
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_title_link_icon
+    - node.type.country
+    - paragraphs.paragraphs_type.title_icon_link
+  module:
+    - entity_reference_revisions
+id: node.country.field_block_title_link_icon
+field_name: field_block_title_link_icon
+entity_type: node
+bundle: country
+label: 'Block Title - Link - Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_icon_link: title_icon_link
+    target_bundles_drag_drop:
+      card:
+        weight: 10
+        enabled: false
+      file:
+        weight: 11
+        enabled: false
+      link:
+        weight: 12
+        enabled: false
+      link_file:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      text_two_col:
+        weight: 15
+        enabled: false
+      title_icon_link:
+        enabled: true
+        weight: 16
+      title_left_text_right:
+        weight: 17
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

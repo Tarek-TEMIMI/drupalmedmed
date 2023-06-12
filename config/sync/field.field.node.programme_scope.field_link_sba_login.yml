@@ -1,0 +1,23 @@
+uuid: d26f3fb4-781e-49ad-9d31-03de51a6efec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_sba_login
+    - node.type.programme_scope
+  module:
+    - link
+id: node.programme_scope.field_link_sba_login
+field_name: field_link_sba_login
+entity_type: node
+bundle: programme_scope
+label: 'Link sba login'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

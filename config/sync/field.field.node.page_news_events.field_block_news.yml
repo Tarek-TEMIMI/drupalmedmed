@@ -1,0 +1,75 @@
+uuid: 0731e7b3-0b27-478e-a1c1-b28a48af0787
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_news
+    - node.type.page_news_events
+    - paragraphs.paragraphs_type.file
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: node.page_news_events.field_block_news
+field_name: field_block_news
+entity_type: node
+bundle: page_news_events
+label: 'Block news'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      file: file
+      link: link
+    target_bundles_drag_drop:
+      card:
+        weight: 12
+        enabled: false
+      file:
+        enabled: true
+        weight: 13
+      link:
+        enabled: true
+        weight: 14
+      link_file:
+        weight: 15
+        enabled: false
+      block_regional_initiatives:
+        weight: 16
+        enabled: false
+      slide:
+        weight: 16
+        enabled: false
+      block_scope:
+        weight: 17
+        enabled: false
+      text:
+        weight: 17
+        enabled: false
+      text_two_col:
+        weight: 18
+        enabled: false
+      title_icon_link:
+        weight: 19
+        enabled: false
+      title_left_text_right:
+        weight: 20
+        enabled: false
+      title_text:
+        weight: 21
+        enabled: false
+      push_member:
+        weight: 22
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 22
+        enabled: false
+      push_regional_initiatives:
+        weight: 23
+        enabled: false
+field_type: entity_reference_revisions

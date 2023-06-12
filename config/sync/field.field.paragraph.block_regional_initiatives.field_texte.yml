@@ -1,0 +1,21 @@
+uuid: 225766e2-84ee-4fb5-b448-5af103787d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texte
+    - paragraphs.paragraphs_type.block_regional_initiatives
+  module:
+    - text
+id: paragraph.block_regional_initiatives.field_texte
+field_name: field_texte
+entity_type: paragraph
+bundle: block_regional_initiatives
+label: Texte
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

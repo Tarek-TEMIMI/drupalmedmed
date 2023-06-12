@@ -1,0 +1,45 @@
+uuid: 6b8f272c-5f8f-4544-940e-b024f337e132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_pays.field_icon
+    - field.field.paragraph.block_pays.field_link
+    - field.field.paragraph.block_pays.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.block_pays
+  module:
+    - image
+    - link
+id: paragraph.block_pays.default
+targetEntityType: paragraph
+bundle: block_pays
+mode: default
+content:
+  field_icon:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

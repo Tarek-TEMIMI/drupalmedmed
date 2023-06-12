@@ -1,0 +1,19 @@
+uuid: 38850bee-dd68-47c8-8859-6ceb09e18f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_block_news
+    - node.type.page_news_events
+id: node.page_news_events.field_title_block_news
+field_name: field_title_block_news
+entity_type: node
+bundle: page_news_events
+label: 'Title block news'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

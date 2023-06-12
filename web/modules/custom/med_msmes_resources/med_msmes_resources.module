@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Contains med_msmes_resources.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function med_msmes_resources_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the med_msmes_resources module.
+    case 'help.page.med_msmes_resources':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+/**
+ * Implements hook_better_exposed_filters_filter_widgets_alter().
+ */
+function med_msmes_resources_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if($form['#id'] == 'views-exposed-form-resources-resources') {
+    $form['field_taxo_countries_target_id'] ['#options']['All'] = t('All');
+    $form['field_tags_target_id']['#options']['All'] = t('All');
+    unset($form['field_type_resources_target_id']['#options']['All']);
+    unset($form['field_taxo_programme_scope_target_id']['#options']['All']);
+    $form['field_taxo_programme_scope_target_id']['#options'] = $form['field_taxo_programme_scope_target_id']['#options'] + ['All' => t('All') ] ;
+  }
+  if($form['#id'] == 'views-exposed-form-folder-block-1') {
+    $form['field_tags_target_id']['#options']['All'] = t('All');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function med_msmes_resources_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if(in_array($form_id,['node_resources_form','node_resources_edit_form'])) {
+    $properties = [
+      'name' => 'news',
+      'vid' => 'resources'
+    ];
+    $terms = Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties($properties);
+    $term = reset($terms);
+    if(is_object($term)) {
+      $tid = !empty($term) ? $term->id() : 0;
+      $form['field_link_1']['#states'] = [
+        'visible' => [
+          ':input[name="field_type_resources"]' => ['value' => $tid],
+        ],
+      ];
+      $form['field_file']['#states'] = [
+        'invisible' => [
+          ':input[name="field_type_resources"]' => ['value' => $tid],
+        ],
+      ];
+    }
+  }
+
+  if ($form_id == 'search_block_form') {
+
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', 'page_search')
+      ->execute();
+    if (!empty($nids)) {
+      $nodes = Node::loadMultiple($nids);
+      if (!empty($nodes)) {
+        $action_search = end($nodes);
+        $form['#cache']['tags'][] = 'node:' . $action_search->id();
+        $form['#action']= !empty($action_search) ? $action_search->toUrl()->toString()  : '';
+      }
+    }
+    $form['actions']['submit']['#is_search'] = TRUE;
+  }
+
+}

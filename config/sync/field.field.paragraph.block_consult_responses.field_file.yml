@@ -1,0 +1,27 @@
+uuid: 18412258-5014-41da-8a12-23572cf7465d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.block_consult_responses
+  module:
+    - file
+id: paragraph.block_consult_responses.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: block_consult_responses
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf odf odg odp ods odt fodt fods fodp fodg key numbers pages'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

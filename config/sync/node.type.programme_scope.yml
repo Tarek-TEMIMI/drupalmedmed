@@ -1,0 +1,18 @@
+uuid: ba906a85-09ed-4db9-99e3-986a50cba3ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Programme Scope'
+type: programme_scope
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

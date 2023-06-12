@@ -1,0 +1,10 @@
+{% block paragraph %}
+  {% block content %}
+    {% if paragraph.field_link.0.url.isExternal() %}
+      {% set url = paragraph.field_link.0.uri %}
+    {% endif %}
+      <li class="sociel-item"><a target="_blank" href="{{ url }}" class="icon-social-media "></a> 
+  {% endblock %}
+{% endblock paragraph %}
+
+

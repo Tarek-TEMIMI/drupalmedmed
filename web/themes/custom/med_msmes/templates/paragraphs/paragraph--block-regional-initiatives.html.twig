@@ -1,0 +1,13 @@
+<section class="regional-bloc-wrapper news-content-wrapper">
+  {% block paragraph %}
+    {% block content %}
+      <div class="info-bloc-title-wrapper">
+        <h2 class="info-title">{{ content.field_title }}</h2>
+      </div>
+      <div class="regional-parag-bloc-wrapper">
+        {{ content.field_texte }}
+      </div>
+      {{ content.field_push_regional_initiatives }}
+    {% endblock %}
+  {% endblock paragraph %}
+</section>

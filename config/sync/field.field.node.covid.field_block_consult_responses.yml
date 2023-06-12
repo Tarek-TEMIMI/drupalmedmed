@@ -1,0 +1,76 @@
+uuid: d5ba275c-6b37-48cf-a309-dc65503cb9ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_consult_responses
+    - node.type.covid
+    - paragraphs.paragraphs_type.block_consult_responses
+  module:
+    - entity_reference_revisions
+id: node.covid.field_block_consult_responses
+field_name: field_block_consult_responses
+entity_type: node
+bundle: covid
+label: 'Block Consult responses'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_consult_responses: block_consult_responses
+    target_bundles_drag_drop:
+      block_consult_responses:
+        enabled: true
+        weight: 17
+      block_regional_initiatives:
+        weight: 18
+        enabled: false
+      block_scope:
+        weight: 19
+        enabled: false
+      card:
+        weight: 20
+        enabled: false
+      file:
+        weight: 21
+        enabled: false
+      link:
+        weight: 22
+        enabled: false
+      link_file:
+        weight: 23
+        enabled: false
+      push_member:
+        weight: 24
+        enabled: false
+      push_regional_initiatives:
+        weight: 25
+        enabled: false
+      slide:
+        weight: 26
+        enabled: false
+      text:
+        weight: 27
+        enabled: false
+      text_two_col:
+        weight: 28
+        enabled: false
+      title_icon_link:
+        weight: 29
+        enabled: false
+      title_left_text_right:
+        weight: 30
+        enabled: false
+      title_text:
+        weight: 31
+        enabled: false
+      title_text_text_two_col_card:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,18 @@
+uuid: 25f329ef-a1fd-4c29-8e93-e46012df4e00
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.push_regional_initiatives
+id: paragraph.push_regional_initiatives.created
+field_name: created
+entity_type: paragraph
+bundle: push_regional_initiatives
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

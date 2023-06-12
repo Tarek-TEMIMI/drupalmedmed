@@ -1,0 +1,52 @@
+uuid: 2bfe51ff-bb62-4510-aded-9dbdb6605424
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.country
+    - paragraphs.paragraphs_type.title_text_text_two_col_card
+  module:
+    - entity_reference_revisions
+id: node.country.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: country
+label: Contenu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_text_text_two_col_card: title_text_text_two_col_card
+    target_bundles_drag_drop:
+      card:
+        weight: 9
+        enabled: false
+      file:
+        weight: 10
+        enabled: false
+      link:
+        weight: 11
+        enabled: false
+      link_file:
+        weight: 12
+        enabled: false
+      text:
+        weight: 13
+        enabled: false
+      text_two_col:
+        weight: 14
+        enabled: false
+      title_left_text_right:
+        weight: 15
+        enabled: false
+      title_text_text_two_col_card:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

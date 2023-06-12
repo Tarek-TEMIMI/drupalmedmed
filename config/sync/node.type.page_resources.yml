@@ -1,0 +1,18 @@
+uuid: e480f297-2803-4430-9150-8ae775784874
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Page Resources'
+type: page_resources
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

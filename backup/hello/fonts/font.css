@@ -1,0 +1,20 @@
+/***********FiraSans**********/
+
+@font-face {
+  font-family: FiraSans;
+  src: local("FiraSans-Bold"),
+       url(../fonts/FiraSans/FiraSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: FiraSans;
+  src: local("FiraSans-Regular"),
+       url(../fonts/FiraSans/FiraSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family:FiraSans;
+  src: local("FiraSans-"),
+       url(../fonts/FiraSans/FiraSans-Light.ttf);
+  font-weight: 300;
+}

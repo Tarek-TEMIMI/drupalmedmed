@@ -1,0 +1,99 @@
+uuid: e3d1f9e1-e25a-4b1a-8a4d-2e8f182fca24
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.resources.field_file
+    - field.field.node.resources.field_link_1
+    - field.field.node.resources.field_sub_title
+    - field.field.node.resources.field_tags
+    - field.field.node.resources.field_taxo_countries
+    - field.field.node.resources.field_taxo_programme_scope
+    - field.field.node.resources.field_type_resources
+    - node.type.resources
+  module:
+    - file
+    - link
+    - user
+id: node.resources.teaser
+targetEntityType: node
+bundle: resources
+mode: teaser
+content:
+  field_file:
+    type: file_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_link_1:
+    type: link
+    weight: 1
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_sub_title:
+    type: string
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_taxo_countries:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_taxo_programme_scope:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_type_resources:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  langcode:
+    type: language
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

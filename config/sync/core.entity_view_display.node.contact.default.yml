@@ -1,0 +1,103 @@
+uuid: bc821e01-cbaa-43a5-a4c7-d082db00d889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact.body
+    - field.field.node.contact.field_address
+    - field.field.node.contact.field_icon_scope
+    - field.field.node.contact.field_map
+    - field.field.node.contact.field_push_member
+    - field.field.node.contact.field_site_web
+    - field.field.node.contact.field_tel
+    - field.field.node.contact.field_title_block_address
+    - field.field.node.contact.field_title_block_members
+    - node.type.contact
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+id: node.contact.default
+targetEntityType: node
+bundle: contact
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_icon_scope:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_map:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_push_member:
+    type: entity_reference_revisions_entity_view
+    weight: 110
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_site_web:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tel:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_block_address:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_block_members:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

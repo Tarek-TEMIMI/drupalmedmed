@@ -1,0 +1,19 @@
+uuid: dff8f878-038e-41e5-8e20-76ccd6e2b16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.block_regional_initiatives
+id: paragraph.block_regional_initiatives.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: block_regional_initiatives
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

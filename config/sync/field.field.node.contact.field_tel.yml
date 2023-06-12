@@ -1,0 +1,19 @@
+uuid: 3db7a7ec-e28d-4624-8cfb-c402d4ab38d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tel
+    - node.type.contact
+id: node.contact.field_tel
+field_name: field_tel
+entity_type: node
+bundle: contact
+label: Tel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

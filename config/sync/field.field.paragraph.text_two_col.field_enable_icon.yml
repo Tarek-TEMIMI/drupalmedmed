@@ -1,0 +1,23 @@
+uuid: 5109d3c8-7c9a-4eae-9589-ede4fbb8cf05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enable_icon
+    - paragraphs.paragraphs_type.text_two_col
+id: paragraph.text_two_col.field_enable_icon
+field_name: field_enable_icon
+entity_type: paragraph
+bundle: text_two_col
+label: 'Enable icon'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

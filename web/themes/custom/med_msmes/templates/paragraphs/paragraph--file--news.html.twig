@@ -1,0 +1,5 @@
+{% block paragraph %}
+  {% block content %}
+    <li><a target="_blank" href="{{ file_url(content.field_file["#items"][0].entity.uri.value) }}">{{ content.field_title }}</a></li>
+  {% endblock %}
+{% endblock paragraph %}

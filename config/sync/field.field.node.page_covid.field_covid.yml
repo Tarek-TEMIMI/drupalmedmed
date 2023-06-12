@@ -1,0 +1,28 @@
+uuid: 744fade0-27e7-410e-a8b7-3ce4d0c39c6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_covid
+    - node.type.covid
+    - node.type.page_covid
+id: node.page_covid.field_covid
+field_name: field_covid
+entity_type: node
+bundle: page_covid
+label: Covid
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      covid: covid
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

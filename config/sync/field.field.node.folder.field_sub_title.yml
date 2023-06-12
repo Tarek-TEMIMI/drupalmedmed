@@ -1,0 +1,19 @@
+uuid: 7cab248b-4946-4c8c-863b-7306165e7502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.folder
+id: node.folder.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: folder
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

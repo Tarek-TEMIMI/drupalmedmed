@@ -1,0 +1,19 @@
+uuid: ca26ef6e-819b-42b0-b8dd-005d8f02d068
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_text_image
+field_name: field_text_image
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 6cac54cb-1931-4f53-8256-aee322bce975
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.push_regional_initiatives
+id: paragraph.push_regional_initiatives.status
+field_name: status
+entity_type: paragraph
+bundle: push_regional_initiatives
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,28 @@
+uuid: 7bcc988d-db2c-4ca4-93ee-5bdb3acf0ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practices
+    - node.type.country
+    - node.type.resources
+id: node.country.field_practices
+field_name: field_practices
+entity_type: node
+bundle: country
+label: 'Resources Practices'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resources: resources
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

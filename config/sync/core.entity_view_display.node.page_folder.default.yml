@@ -1,0 +1,30 @@
+uuid: b9bbf8f4-60da-4771-8036-e8bde27f7557
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page_folder.body
+    - node.type.page_folder
+  module:
+    - text
+    - user
+id: node.page_folder.default
+targetEntityType: node
+bundle: page_folder
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: 52013ab1-1c37-4d82-aa2e-f77459570313
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block_regional_initiatives
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.block_regional_initiatives
+target_entity_type_id: paragraph
+target_bundle: block_regional_initiatives
+default_langcode: site_default
+language_alterable: true
